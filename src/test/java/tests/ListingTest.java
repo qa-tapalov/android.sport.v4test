@@ -40,7 +40,13 @@ public class ListingTest extends InitialClass {
         checkElementOnPage(lPage.getSell());
         checkElementOnPage(lPage.getAddBasket());
 
-    }
+
+
+
+
+
+
+           }
 
 
 
