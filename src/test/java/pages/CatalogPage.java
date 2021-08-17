@@ -20,6 +20,8 @@ public class CatalogPage extends BaseClass {
     private final By titleCategory = MobileBy.id("ru.sportmaster.app.v4:id/title_subcategory_tw");
     private final By titleSubCategory = MobileBy.id("ru.sportmaster.app.v4:id/title_low_subcategory_tw");
     private final By subCategory3 = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]/android.widget.TextView");
+    private final By recentlyWatched = MobileBy.id("ru.sportmaster.app.v4:id/recommendations_recycle_view");
+
 
     public By getCatalog() { return catalog; }
     public By getSearchBar() {return searchBar;}
@@ -35,5 +37,11 @@ public class CatalogPage extends BaseClass {
     public By getTitleCategory() { return titleCategory; }
     public By getTitleSubCategory() { return titleSubCategory; }
     public By getSubCategory3() {return subCategory3;}
+
+    public By getRecentlyWatched() {
+        return recentlyWatched;
+    }
+
+
 }
 

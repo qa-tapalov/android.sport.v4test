@@ -13,7 +13,7 @@ public class SearchBarTest extends InitialClass {
         clickOnElement(cPage.getCatalog());
         clickOnElement(sBar.getSearchbar());
         sendKeys(sBar.getSearchbar(),"кроссовки");
-        clickOnElement(sBar.getTap());
+        clickOnElement(sBar.getHint());
         checkElementOnPage(sBar.getSearchTitle());
 
     }

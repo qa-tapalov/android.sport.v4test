@@ -13,15 +13,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.time.Instant;
 
 public class BaseClass {
+
+
     public static WebDriverWait wait;
 
-
-;
-
     public static AppiumDriver<MobileElement> driver;
+
+
+
 
     @Before
     public void setup() throws MalformedURLException {

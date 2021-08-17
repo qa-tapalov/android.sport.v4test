@@ -1,6 +1,7 @@
 package tests;
 
 import org.junit.Test;
+import pages.CatalogPage;
 import pages.InitialClass;
 
 public class CatalogTest extends InitialClass {
@@ -31,7 +32,26 @@ public class CatalogTest extends InitialClass {
         checkElementOnPage(cPage.getBackButton());
         checkElementOnPage(cPage.getTitleCategory());
         checkElementOnPage(cPage.getTitleSubCategory());
-
     }
+
+    @Test
+    //Проверка появление блока ранее просмотренных товаров
+    public void checkResentlyWatched() throws InterruptedException {
+        clickOnElement(cPage.getCatalog());
+        Thread.sleep(1000);
+        verticalSwipeByPercentages(0.8,0.01,0.5);
+        isElementDisplayed(cPage.getRecentlyWatched());
+        clickOnElement(sBar.getSearchbar());
+        sendKeys(sBar.getSearchbar(),"кроссовки");
+        clickOnElement(sBar.getHint());
+        clickOnElement(lPage.getItem());
+        Thread.sleep(1000);
+        clickOnElement(cPage.getCatalog());
+        Thread.sleep(1000);
+        verticalSwipeByPercentages(0.8,0.01,0.5);
+        isElementDisplayed(cPage.getRecentlyWatched());
+    }
+
+
 
 }

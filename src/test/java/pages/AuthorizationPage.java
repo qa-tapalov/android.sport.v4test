@@ -18,6 +18,7 @@ public class AuthorizationPage extends BaseClass {
     private final By alertGoogle = MobileBy.id("com.google.android.gms:id/positive_button");
     private final By profile = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView");
 
+
     public By getProfilePage() { return profilePage; }
 
     public By getCloseBtn() { return closeBtn; }

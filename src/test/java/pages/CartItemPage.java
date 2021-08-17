@@ -21,6 +21,8 @@ public class CartItemPage extends BaseClass {
     private final By price = MobileBy.id("ru.sportmaster.app.v4:id/price");
 
 
+
+
     public By getBackBtn() { return backBtn; }
     public By getFavorite() { return favorite; }
     public By getCompare() { return compare; }
