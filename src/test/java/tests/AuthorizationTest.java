@@ -22,16 +22,16 @@ public class AuthorizationTest extends InitialClass {
     }
 
 //авторизация по номеру телефона, используя автоподтановку кода, средствами андроида
-    @Test
-    public void authWithNumber() throws InterruptedException{
-        clickOnElement(authPage.getProfilePage());
-        sendKeys(authPage.getPhoneEdit(),"9372508072");
-        clickOnElement(authPage.getAuthBtn());
-
-        clickOnElement(authPage.getAlertGoogle());
-
-
-
-    }
+//    @Test
+//    public void authWithNumber() throws InterruptedException{
+//        clickOnElement(authPage.getProfilePage());
+//        sendKeys(authPage.getPhoneEdit(),"9372508072");
+//        clickOnElement(authPage.getAuthBtn());
+//
+//        clickOnElement(authPage.getAlertGoogle());
+//
+//
+//
+//    }
 
 }

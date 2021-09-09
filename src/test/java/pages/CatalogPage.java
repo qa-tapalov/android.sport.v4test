@@ -10,8 +10,8 @@ public class CatalogPage extends BaseClass {
     private final By searchBar = MobileBy.id("ru.sportmaster.app.v4:id/search_by_text");
     private final By scanCode = MobileBy.id("ru.sportmaster.app.v4:id/scan_code_image");
     private final By searchByPhoto = MobileBy.id("ru.sportmaster.app.v4:id/search_by_photo_image");
-    private final By tabRazdel = MobileBy.xpath("//android.widget.LinearLayout[@content-desc=\"Разделы\"]");
-    private final By tabCatalog = MobileBy.id("//android.widget.LinearLayout[@content-desc=\"Каталог\"]");
+    private final By tabRazdel = MobileBy.AccessibilityId("Разделы");
+    private final By tabCatalog = MobileBy.AccessibilityId("Каталог");
     private final By category = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]");
     private final By subCategory = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.TextView");
     private final By backButton = MobileBy.id("ru.sportmaster.app.v4:id/navigation_back_btn");
@@ -22,6 +22,11 @@ public class CatalogPage extends BaseClass {
     private final By subCategory3 = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]/android.widget.TextView");
     private final By recentlyWatched = MobileBy.id("ru.sportmaster.app.v4:id/recommendations_recycle_view");
 
+    private final By jenshinam = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.TextView");
+
+    public By getJenshinam() {
+        return jenshinam;
+    }
 
     public By getCatalog() { return catalog; }
     public By getSearchBar() {return searchBar;}

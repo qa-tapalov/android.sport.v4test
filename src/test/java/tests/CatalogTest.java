@@ -1,7 +1,6 @@
 package tests;
 
 import org.junit.Test;
-import pages.CatalogPage;
 import pages.InitialClass;
 
 public class CatalogTest extends InitialClass {

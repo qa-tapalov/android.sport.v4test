@@ -1,13 +1,16 @@
 package pages;
 
+
 import core.BaseClass;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
 import static io.appium.java_client.touch.offset.PointOption.point;
@@ -15,6 +18,7 @@ import static java.time.Duration.ofMillis;
 import static java.time.Duration.ofSeconds;
 
 public class InitialClass extends BaseClass{
+
 
 
     public CatalogPage cPage = new CatalogPage();
@@ -25,11 +29,22 @@ public class InitialClass extends BaseClass{
 
 
 
+    //открытие конекретного товара
+    public void openItem(String keys){
+
+        clickOnElement(cPage.getCatalog());
+        clickOnElement(cPage.getSearchBar());
+        driver.findElement(cPage.getSearchBar()).sendKeys(keys);
+        tapByCoordinates(981, 1913);
+        clickOnElement(lPage.getImageItem());
+    }
+
+
+
     //Click on element
     public void clickOnElement(By element){
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(element));
-
+       wait.until(ExpectedConditions.presenceOfElementLocated(element));
         driver.findElement(element).click();
 
         System.out.println("Click on element" + element);
@@ -37,20 +52,23 @@ public class InitialClass extends BaseClass{
 
     //checking for the presence of an element
     public void checkElementOnPage(By element){
+
         try{
-            BaseClass.wait.until(ExpectedConditions.presenceOfElementLocated(element));
-            BaseClass.driver.findElement(element);
-            System.out.println("Элемент '" + element + "' присутствует");
+            MobileElement object = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(element));
+            object.getText();
+            driver.findElement(element);
+            System.out.println("Элемент присутствует " + element);
 
         }
         catch (Exception e){
 
-            System.out.println("Элемент " + element + " отсутствует");
+            System.out.println("Элемент отсутствует " + element);
 
 
         }
 
     }
+
 //    public void checkElementOnPageWithText(String keys){
 //        BaseClass.wait.until(ExpectedConditions.presenceOfElementLocated(keys));
 //        BaseClass.driver.findElement(keys);
@@ -166,29 +184,49 @@ public class InitialClass extends BaseClass{
         }
     }
 
-//    public void invisibilityElement(By element){
-//        MobileElement element1 = driver.findElement(ExpectedConditions.invisibilityOfElementWithText(element));
-//        System.out.println("Элемент скрыт");
-//    }
 
     //checking if element is displayed
-//    public void checkElementDisplayed(By element){
-//        if(driver.findElement(element).isDisplayed()){
-//            System.out.println("Элемент найден");
-//        }
-//        else{
-//            System.out.println("Элемент скрыт");
-//
-//        }
-//    }
     public void isElementDisplayed(By element){
         try{
              driver.findElement(element).isDisplayed();
-            System.out.println("Элемент найден" + element);
+            System.out.println("Элемент найден " + element);
 
         }catch(Exception e){
-            System.out.println("Элемент скрыт" + element);
+            System.out.println("Элемент скрыт " + element);
         }
     }
+
+    //Assert element
+    public void assertElementByText(By element, String keys){
+       MobileElement compare = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(element));
+        if (compare.getText().equals(keys)){
+            System.out.println("Надпись соответствует: " + compare.getText());
+        }
+        else {
+            System.out.println("Надпись не соответствует: " + compare.getText());
+
+        }
+
+    }
+
+    // assert element to element
+    public void assertElementToElement(By element1, By element2, int x1, int x2, int x3){
+        MobileElement compare1 = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(element1));
+        compare1.getText();
+
+        verticalSwipeByPercentages(x1, x2, x3);
+        MobileElement compare2 = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(element2));
+        if (compare2.getText().equals(compare1.getText())){
+            System.out.println("Значения равны: " + compare2.getText());
+        }
+        else {
+            System.out.println("Значения не равны: " + compare2.getText());
+
+        }
+
+    }
+
+
+
 
 }

@@ -32,4 +32,14 @@ public class SearchBarTest extends InitialClass {
 
     }
 
+    //открытие конкретного товара
+    @Test
+    public void openItem() throws InterruptedException {
+        openItem("кроссовки");
+        Thread.sleep(10000);
+
+
+
+    }
+
 }
