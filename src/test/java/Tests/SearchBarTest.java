@@ -1,12 +1,13 @@
-package tests;
+package Tests;
 
 import org.junit.Test;
-import pages.InitialClass;
+import PageObject.InitialClass;
 
 public class SearchBarTest extends InitialClass {
 
 
     //проверка кликабельности подсказки
+    //https://testrail.app.local/testrail/index.php?/cases/view/678832
     @Test
     public void checkTapOnSearch(){
 
@@ -19,6 +20,7 @@ public class SearchBarTest extends InitialClass {
     }
 
     //проверка наличия элементов в поиске
+    //https://testrail.app.local/testrail/index.php?/cases/view/678830
     @Test
     public void checkElementsOnSearch(){
         clickOnElement(cPage.getCatalog());
@@ -35,11 +37,9 @@ public class SearchBarTest extends InitialClass {
     //открытие конкретного товара
     @Test
     public void openItem() throws InterruptedException {
-        openItem("кроссовки");
-        Thread.sleep(10000);
-
-
-
+        openListing("кроссовки");
+        Thread.sleep(2000);
+        checkElementOnPage(sBar.getSearchTitle());
     }
 
 }

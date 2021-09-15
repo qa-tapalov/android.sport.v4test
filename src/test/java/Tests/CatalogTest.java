@@ -1,12 +1,13 @@
-package tests;
+package Tests;
 
 import org.junit.Test;
-import pages.InitialClass;
+import PageObject.InitialClass;
 
 public class CatalogTest extends InitialClass {
 
 
     //проверка наличия элементов в каталоге
+    //https://testrail.app.local/testrail/index.php?/cases/view/671781
     @Test
     public void checkElementsOnCatalog() {
         clickOnElement(cPage.getCatalog());
@@ -20,6 +21,7 @@ public class CatalogTest extends InitialClass {
 
 
     //проверка наличия элементов на 2-3 уровнях каталога
+    //https://testrail.app.local/testrail/index.php?/cases/view/671788
     @Test
     public void checkSubCategoryRazdel(){
         clickOnElement(cPage.getCatalog());

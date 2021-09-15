@@ -1,9 +1,9 @@
-package pages;
+package PageObject;
 
 
-import core.BaseClass;
-import io.appium.java_client.MobileBy;
+import BasePage.BaseClass;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
@@ -29,14 +29,14 @@ public class InitialClass extends BaseClass{
 
 
 
-    //открытие конекретного товара
-    public void openItem(String keys){
+    //открытие плитки через поиск
+    public void openListing(String keys) throws InterruptedException {
 
         clickOnElement(cPage.getCatalog());
         clickOnElement(cPage.getSearchBar());
         driver.findElement(cPage.getSearchBar()).sendKeys(keys);
+        Thread.sleep(1500);
         tapByCoordinates(981, 1913);
-        clickOnElement(lPage.getImageItem());
     }
 
 
@@ -47,7 +47,8 @@ public class InitialClass extends BaseClass{
        wait.until(ExpectedConditions.presenceOfElementLocated(element));
         driver.findElement(element).click();
 
-        System.out.println("Click on element" + element);
+        System.out.println("Click on element: " + element);
+
     }
 
     //checking for the presence of an element
@@ -82,15 +83,17 @@ public class InitialClass extends BaseClass{
     }
 
     //Scroll by coordinates
-    public void scrollByCoord( int x1, int y1, int x2, int y2){
+    public void scrollByCoord( int x1, int y1, int x2, int y2, int j) throws InterruptedException {
         AndroidTouchAction action = new AndroidTouchAction(driver);
 
-        action.press(PointOption.point(x1,y1))
-                .waitAction(waitOptions(ofMillis(1000)))
-                .moveTo(PointOption.point(x2,y2))
-                .release()
-                .perform();
-
+        Thread.sleep(2500);
+        for (int i = 0; i < j; i++) {
+            action.press(PointOption.point(x1, y1))
+                    .waitAction(waitOptions(ofMillis(1000)))
+                    .moveTo(PointOption.point(x2, y2))
+                    .release()
+                    .perform();
+        }
     }
 
     //Horizontal Swipe by percentages
@@ -171,22 +174,56 @@ public class InitialClass extends BaseClass{
                 .moveTo(point(endX, endY))
                 .release().perform();
     }
+
     //Scroll to element
-    public boolean scrollToElementById(String element) {
-        try {
-            driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))" +
-                    ".scrollIntoView(new UiSelector().resourceId(\" + element + \").instance(0))"));
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("Scroll to element failed");
-            return false;
-        }
+    public void scrollToElementById() {
+//        Dimension dimensions = driver.manage().window().getSize();
+//        double point = dimensions.getHeight() * 0.45;
+//        int pointAsAnInteger = (int) point;
+//
+//        int element_Count = driver.findElements(element).size();
+//        System.out.println("Element count is : " + element_Count);
+//
+//        do {
+//            TouchAction action = new TouchAction(driver);
+//            action.press(PointOption.point(0 , pointAsAnInteger * 2))
+//                    .moveTo(PointOption.point(0 , pointAsAnInteger))
+//                    .release()
+//                    .perform();
+//            element_Count = driver.findElements(element).size();
+//            System.out.println("Element count is : " + element_Count);
+//        } while(element_Count==0);
+//        Dimension dimensions = driver.manage().window().getSize();
+//        Double point = dimensions.getHeight() * 0.45;
+//        int pointAsAnInteger = point.intValue();
+//
+        int spinner_Count = driver.findElements(By.id("ru.sportmaster.app.v4:id/by_cart_include")).size();
+        System.out.println("Spinner count is : " + spinner_Count);
+
+        do {
+            TouchAction action = new TouchAction(driver);
+            action.press(PointOption.point(560 , 1750))
+                    .moveTo(PointOption.point(560 , 350))
+                    .waitAction(waitOptions(ofMillis(1000)))
+                    .release()
+                    .perform();
+            spinner_Count = driver.findElements(By.id("ru.sportmaster.app.v4:id/by_cart_include")).size();
+            System.out.println("Spinner count is : " + spinner_Count);
+        } while(spinner_Count==0);
+
+
+
+
+
+
+
+
     }
 
 
     //checking if element is displayed
-    public void isElementDisplayed(By element){
+    public void isElementDisplayed(By element) throws InterruptedException {
+        Thread.sleep(2000);
         try{
              driver.findElement(element).isDisplayed();
             System.out.println("Элемент найден " + element);
@@ -210,11 +247,11 @@ public class InitialClass extends BaseClass{
     }
 
     // assert element to element
-    public void assertElementToElement(By element1, By element2, int x1, int x2, int x3){
+    public void assertElementToElement(By element1, By element2, int x1, int y1, int x2, int y2, int j) throws InterruptedException {
         MobileElement compare1 = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(element1));
         compare1.getText();
 
-        verticalSwipeByPercentages(x1, x2, x3);
+        scrollByCoord( x1,  y1,  x2,  y2,  j);
         MobileElement compare2 = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(element2));
         if (compare2.getText().equals(compare1.getText())){
             System.out.println("Значения равны: " + compare2.getText());

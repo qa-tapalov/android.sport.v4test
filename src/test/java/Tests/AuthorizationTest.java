@@ -1,7 +1,7 @@
-package tests;
+package Tests;
 
 import org.junit.Test;
-import pages.InitialClass;
+import PageObject.InitialClass;
 
 public class AuthorizationTest extends InitialClass {
 

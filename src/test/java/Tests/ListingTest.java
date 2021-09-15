@@ -1,12 +1,13 @@
-package tests;
+package Tests;
 
 import org.junit.Test;
-import pages.InitialClass;
+import PageObject.InitialClass;
 
 public class ListingTest extends InitialClass {
 
 
     //проверка наличия элементов в товарной плитке
+    //https://testrail.app.local/testrail/index.php?/cases/view/671850
     @Test
     public void checkElementsOnListing(){
 
@@ -24,6 +25,7 @@ public class ListingTest extends InitialClass {
         checkElementOnPage(lPage.getViewListing());
     }
     //проверка наличия элементов на карточке товара в товарной плитке
+    //https://testrail.app.local/testrail/index.php?/cases/view/671854
     @Test
     public void checkElementOnItem(){
         clickOnElement(cPage.getCatalog());

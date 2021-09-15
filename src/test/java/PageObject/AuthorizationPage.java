@@ -1,6 +1,6 @@
-package pages;
+package PageObject;
 
-import core.BaseClass;
+import BasePage.BaseClass;
 import io.appium.java_client.MobileBy;
 import org.openqa.selenium.By;
 

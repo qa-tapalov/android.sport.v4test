@@ -1,6 +1,6 @@
-package pages;
+package PageObject;
 
-import core.BaseClass;
+import BasePage.BaseClass;
 import io.appium.java_client.MobileBy;
 import org.openqa.selenium.By;
 
@@ -30,6 +30,7 @@ public class CartItemPage extends BaseClass {
     private final By colorImage = MobileBy.id("ru.sportmaster.app.v4:id/colorImage");
     private final By sizeGroup = MobileBy.id("ru.sportmaster.app.v4:id/sizeGroup");
     private final By sizesChoiser = MobileBy.id("ru.sportmaster.app.v4:id/sizesChoiser");
+    private final By sizeItem = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView[2]/androidx.cardview.widget.CardView[1]");
     private final By table_size_link = MobileBy.id("ru.sportmaster.app.v4:id/table_size_link");
     private final By sizes = MobileBy.id("ru.sportmaster.app.v4:id/sizes");
     private final By addBasketMain = MobileBy.id("ru.sportmaster.app.v4:id/order");
@@ -47,6 +48,11 @@ public class CartItemPage extends BaseClass {
     private final By addBasketFloatBtn= MobileBy.id("ru.sportmaster.app.v4:id/by_cart_btn");
     private final By snackChooseSize = MobileBy.id("ru.sportmaster.app.v4:id/snackbar_text");
     private final By snackSuccessAddBasket = MobileBy.id("ru.sportmaster.app.v4:id/snackbar_text");
+
+
+    public By getSizeItem() {
+        return sizeItem;
+    }
 
     public By getSnackSuccessAddBasket() { return snackSuccessAddBasket; }
     public By getBackBtn() { return backBtn; }

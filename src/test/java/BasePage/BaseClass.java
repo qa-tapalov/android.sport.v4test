@@ -1,4 +1,4 @@
-package core;
+package BasePage;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -14,13 +14,8 @@ import java.net.URL;
 
 public class BaseClass {
 
-
     public static WebDriverWait wait;
-
     public static AppiumDriver<MobileElement> driver;
-
-
-
 
     @Before
     public void setup() throws MalformedURLException {
