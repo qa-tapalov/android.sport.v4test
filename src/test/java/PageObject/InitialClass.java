@@ -26,7 +26,7 @@ public class InitialClass extends BaseClass{
     public SearchBar sBar = new SearchBar();
     public ListingPage lPage = new ListingPage();
     public CartItemPage cartPage = new CartItemPage();
-
+    public BasketPage basketPage = new BasketPage();
 
 
     //открытие плитки через поиск

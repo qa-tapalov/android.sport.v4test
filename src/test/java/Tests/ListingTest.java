@@ -40,18 +40,30 @@ public class ListingTest extends InitialClass {
         checkElementOnPage(lPage.getReviewUi());
         checkElementOnPage(lPage.getReviewCount());
         checkElementOnPage(lPage.getSell());
-        checkElementOnPage(lPage.getAddBasket());
+        checkElementOnPage(lPage.getBasketBtn());
 
 
+    }
 
+    @Test
+    public void addBasketFromListing() throws InterruptedException {
+        openListing("10642580");
+        clickOnElement(lPage.getBasketBtn());
+        clickOnElement(lPage.getSizeElement1());
+        clickOnElement(lPage.getAddBasketBtn());
+        assertElementByText(cartPage.getSnackSuccessAddBasket(),"Товар добавлен в корзину!");
+    }
 
-
-
-
-           }
-
-
-
-
+//    @Test
+//    public void blabla() throws InterruptedException {
+//        openListing("кроссовки");
+//        checkElementOnPage(lPage.getImageItem());
+//        clickOnElement(cPage.getSearchBar());
+//        sendKeys(cPage.getSearchBar(),"палатка");
+//        tapByCoordinates(981, 1913);
+//        clickOnElement(cPage.getBackButton());
+//        Thread.sleep(5000);
+//
+//    }
 
 }
