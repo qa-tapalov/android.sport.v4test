@@ -1,7 +1,9 @@
 package Tests;
 
+import io.appium.java_client.MobileElement;
 import org.junit.Test;
 import PageObject.InitialClass;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CartItemTest extends InitialClass {
 
@@ -39,6 +41,72 @@ public class CartItemTest extends InitialClass {
 //        checkElementOnPage(cartPage.getSpecificationsTitle());
 
     }
+
+    //взаимодействие с картинкой товара
+    //https://testrail.app.local/testrail/index.php?/cases/view/684813
+    @Test
+    public void imageGallery() throws InterruptedException {
+        openListing("10642580");
+        clickOnElement(lPage.getImageItem());
+        clickOnElement(cartPage.getImage());
+        clickOnElement(cartPage.getCloseImageGallery());
+        checkElementOnPage(cartPage.getIndicatorGallery());
+    }
+
+
+    //воспроизведение видео
+    //https://testrail.app.local/testrail/index.php?/cases/view/684816
+    @Test
+    public void videoOnItem() throws InterruptedException {
+        openListing("10656190");
+        clickOnElement(lPage.getImageItem());
+        clickOnElement(cartPage.getPlayVideo());
+        checkElementOnPage(cartPage.getVideoPlayer());
+        tapByCoordinates(590,1080);
+        driver.navigate().back();
+//        clickOnElement(cartPage.getCloseVideoPlayer());
+        MobileElement item = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(cartPage.getNameItem()));
+        System.out.println("Карточка товара: " + item.getText());
+
+
+    }
+
+
+    //отображение рич контента
+    //https://testrail.app.local/testrail/index.php?/cases/view/687803
+
+    @Test
+    public void checkItemWithRichContent() throws InterruptedException {
+        openListing("10558310");
+        clickOnElement(lPage.getImageItem());
+        checkElementOnPage(cartPage.getRichContent());
+        clickOnElement(cartPage.getRichContent());
+        checkElementOnPage(cartPage.getRichWebView());
+
+
+    }
+
+
+
+
+    //открытие таблицы размеров
+    //https://testrail.app.local/testrail/index.php?/cases/view/684821
+    @Test
+    public void openTableSize() throws InterruptedException {
+        openListing("10674141");
+        clickOnElement(lPage.getImageItem());
+        scrollByCoord(50,1700,50,500,1);
+        clickOnElement(cartPage.getTable_size_link());
+        checkElementOnPage(cartPage.getTableSizeView());
+        clickOnElement(cartPage.getCloseTableBtn());
+        MobileElement item = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(cartPage.getNameItem()));
+        System.out.println("Карточка товара: " + item.getText());
+
+    }
+
+
+
+
 
     //проверка появления блока доступности товара в магазине
     //https://testrail.app.local/testrail/index.php?/cases/view/684825

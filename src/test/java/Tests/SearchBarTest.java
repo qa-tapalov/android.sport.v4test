@@ -1,7 +1,9 @@
 package Tests;
 
+import io.appium.java_client.MobileElement;
 import org.junit.Test;
 import PageObject.InitialClass;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SearchBarTest extends InitialClass {
 
@@ -14,7 +16,7 @@ public class SearchBarTest extends InitialClass {
         clickOnElement(cPage.getCatalog());
         clickOnElement(sBar.getSearchbar());
         sendKeys(sBar.getSearchbar(),"кроссовки");
-        clickOnElement(sBar.getHint());
+        clickOnElement(sBar.getHint1());
         checkElementOnPage(sBar.getSearchTitle());
 
     }
@@ -27,19 +29,29 @@ public class SearchBarTest extends InitialClass {
         clickOnElement(sBar.getSearchbar());
         sendKeys(sBar.getSearchbar(),"кроссовки");
         checkElementOnPage(sBar.getTapView());
-        checkElementOnPage(sBar.getHint());
-        checkElementOnPage(sBar.getHintItem());
-        checkElementOnPage(sBar.getImageHintItem());
-
+        checkElementOnPage(sBar.getTap1());
+        checkElementOnPage(sBar.getTap2());
+        checkElementOnPage(sBar.getTap3());
+        checkElementOnPage(sBar.getHint1());
+        checkElementOnPage(sBar.getHint2());
+        checkElementOnPage(sBar.getHint3());
+        checkElementOnPage(sBar.getCartItemFromSearch1());
+        checkElementOnPage(sBar.getCartItemFromSearch2());
+        checkElementOnPage(sBar.getCartItemFromSearch3());
 
     }
 
-    //открытие конкретного товара
+
+    //переход на КТ из поиска
+    //https://testrail.app.local/testrail/index.php?/cases/view/678890
     @Test
-    public void openItem() throws InterruptedException {
-        openListing("кроссовки");
-        Thread.sleep(2000);
-        checkElementOnPage(sBar.getSearchTitle());
-    }
+    public void cartItemFromSearch(){
+       clickOnElement(cPage.getCatalog());
+       clickOnElement(sBar.getSearchbar());
+       sendKeys(sBar.getSearchbar(),"кроссовки");
+       clickOnElement(sBar.getCartItemFromSearch1());
+       MobileElement item = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(cartPage.getNameItem()));
+        System.out.println("Карточка товара: " + item.getText());
+   }
 
 }

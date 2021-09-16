@@ -44,7 +44,7 @@ public class CatalogTest extends InitialClass {
         isElementDisplayed(cPage.getRecentlyWatched());
         clickOnElement(sBar.getSearchbar());
         sendKeys(sBar.getSearchbar(),"кроссовки");
-        clickOnElement(sBar.getHint());
+        clickOnElement(sBar.getHint1());
         clickOnElement(lPage.getItem());
         Thread.sleep(1000);
         clickOnElement(cPage.getCatalog());

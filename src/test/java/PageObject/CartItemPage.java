@@ -17,9 +17,14 @@ public class CartItemPage extends BaseClass {
     private final By compare = MobileBy.id("ru.sportmaster.app.v4:id/action_compare");
     private final By share = MobileBy.id("ru.sportmaster.app.v4:id/action_share");
     private final By playVideo = MobileBy.id("ru.sportmaster.app.v4:id/open_video_btn");
+    private final By videoPlayer = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout[5]/androidx.viewpager.widget.ViewPager/android.view.ViewGroup/android.widget.FrameLayout[4]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View");
+    private final By closeVideoPlayer = MobileBy.xpath("//android.widget.ImageButton[@content-desc=\"Перейти вверх\"]");
+    private final By indicatorGallery = MobileBy.id("ru.sportmaster.app.v4:id/indicator_layout");
     private final By image = MobileBy.id("ru.sportmaster.app.v4:id/image_gallery");
+    private final By closeImageGallery = MobileBy.id("ru.sportmaster.app.v4:id/navigation_back_btn");
     private final By markers = MobileBy.id("ru.sportmaster.app.v4:id/imageMarker");
     private final By richContent = MobileBy.id("ru.sportmaster.app.v4:id/imageRichContent");
+    private final By richWebView = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]/android.webkit.WebView");
     private final By brand = MobileBy.id("ru.sportmaster.app.v4:id/brand");
     private final By ratingBarSvg = MobileBy.id("ru.sportmaster.app.v4:id/ratingBarSvg");
     private final By ratingText = MobileBy.id("ru.sportmaster.app.v4:id/ratingText");
@@ -32,6 +37,9 @@ public class CartItemPage extends BaseClass {
     private final By sizesChoiser = MobileBy.id("ru.sportmaster.app.v4:id/sizesChoiser");
     private final By sizeItem = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView[2]/androidx.cardview.widget.CardView[1]");
     private final By table_size_link = MobileBy.id("ru.sportmaster.app.v4:id/table_size_link");
+    private final By closeTableBtn = MobileBy.id("ru.sportmaster.app.v4:id/closeButton");
+    private final By titleTable = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.TextView");
+    private final By tableSizeView = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.widget.GridView");
     private final By sizes = MobileBy.id("ru.sportmaster.app.v4:id/sizes");
     private final By addBasketMain = MobileBy.id("ru.sportmaster.app.v4:id/order");
     private final By defaultState = MobileBy.id("ru.sportmaster.app.v4:id/default_state");
@@ -48,6 +56,40 @@ public class CartItemPage extends BaseClass {
     private final By addBasketFloatBtn= MobileBy.id("ru.sportmaster.app.v4:id/by_cart_btn");
     private final By snackChooseSize = MobileBy.id("ru.sportmaster.app.v4:id/snackbar_text");
     private final By snackSuccessAddBasket = MobileBy.id("ru.sportmaster.app.v4:id/snackbar_text");
+
+
+    public By getRichWebView() {
+        return richWebView;
+    }
+
+    public By getIndicatorGallery() {
+        return indicatorGallery;
+    }
+
+    public By getCloseVideoPlayer() {
+        return closeVideoPlayer;
+    }
+
+    public By getVideoPlayer() {
+        return videoPlayer;
+    }
+
+
+    public By getCloseImageGallery() {
+        return closeImageGallery;
+    }
+
+    public By getCloseTableBtn() {
+        return closeTableBtn;
+    }
+
+    public By getTableSizeView() {
+        return tableSizeView;
+    }
+
+    public By getTitleTable() {
+        return titleTable;
+    }
 
 
     public By getSizeItem() {
