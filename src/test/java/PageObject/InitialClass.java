@@ -39,6 +39,27 @@ public class InitialClass extends BaseClass{
         tapByCoordinates(981, 1913);
     }
 
+    //добавление товара в корзину и переход в корзину.
+    public void addItemOnBasket(String id, int x) throws InterruptedException {
+        openListing(id);
+        //1 означает, что для данного товара присутствует выбор размера
+        if (x==1){
+            clickOnElement(lPage.getBasketBtn());
+            clickOnElement(lPage.getSizeElement1());
+            clickOnElement(lPage.getAddBasketBtn());
+            checkElementOnPage(cartPage.getSnackSuccessAddBasket());
+            tapByCoordinates(100,250);
+            clickOnElement(basketPage.getBasket());
+
+        }
+       else{
+            clickOnElement(lPage.getBasketBtn());
+            checkElementOnPage(cartPage.getSnackSuccessAddBasket());
+            tapByCoordinates(100,250);
+            clickOnElement(basketPage.getBasket());
+        }
+
+    }
 
 
     //Click on element
@@ -262,8 +283,6 @@ public class InitialClass extends BaseClass{
         }
 
     }
-
-
 
 
 }
