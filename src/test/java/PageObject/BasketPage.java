@@ -41,15 +41,24 @@ public class BasketPage extends BaseClass {
     private final By sumItemOnBasket = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.FrameLayout[2]/android.widget.TextView");
     private final By btnMain = MobileBy.id("ru.sportmaster.app.v4:id/btn");
     private final By btnFloat = MobileBy.id("ru.sportmaster.app.v4:id/by_cart_btn");
-    private final By blockFloat = MobileBy.id("ru.sportmaster.app.v4:id/to_checkout_include\n");
-    private final By blockFloatOldPrice = MobileBy.id("ru.sportmaster.app.v4:id/old_price_tv\n");
+    private final By blockFloat = MobileBy.id("ru.sportmaster.app.v4:id/to_checkout_include");
+    private final By blockFloatOldPrice = MobileBy.id("ru.sportmaster.app.v4:id/old_price_tv");
     private final By blockFloatPrice = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.TextView[2]");
-    private final By itemUnavailable = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[1]/androidx.appcompat.widget.LinearLayoutCompat/android.widget.TextView[1]");
-
+    // нет в наличии
+    private final By itemUnavailableBox = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[1]/androidx.appcompat.widget.LinearLayoutCompat/android.widget.TextView[1]");
+    private final By descItemFromUnavailable = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[1]/android.widget.TextView");
+    private final By deleteAllFromUnavailable = MobileBy.id("ru.sportmaster.app.v4:id/delete_all_tv");
+    private final By imageItemFromUnavailable = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.View");
+    private final By titleItemFromUnavailable = MobileBy.id("ru.sportmaster.app.v4:id/title_tv");
+    private final By colorItemFromUnavailable = MobileBy.id("ru.sportmaster.app.v4:id/color_tv");
+    private final By priceItemFromUnavailable = MobileBy.id("ru.sportmaster.app.v4:id/price_tv");
+    //тотал
     private final By totalItemCount = MobileBy.id("ru.sportmaster.app.v4:id/amount_title_tv");
     private final By totalItemCountSum = MobileBy.id("ru.sportmaster.app.v4:id/old_total_amount_tv");
     private final By totalBox = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat");
 
+    //экран сопсоб получения
+    private final By btnExpressDelivery = MobileBy.id("ru.sportmaster.app.v4:id/express_delivery");
 
 
     public By getBasket() {
@@ -124,9 +133,38 @@ public class BasketPage extends BaseClass {
         return imageItemOnBasket;
     }
 
-    public By getItemUnavailable() {
-        return itemUnavailable;
+    public By getItemUnavailableBox() {
+        return itemUnavailableBox;
     }
+
+    public By getColorItemFromUnavailable() {
+        return colorItemFromUnavailable;
+    }
+
+    public By getBtnExpressDelivery() {
+        return btnExpressDelivery;
+    }
+
+    public By getDeleteAllFromUnavailable() {
+        return deleteAllFromUnavailable;
+    }
+
+    public By getDescItemFromUnavailable() {
+        return descItemFromUnavailable;
+    }
+
+    public By getImageItemFromUnavailable() {
+        return imageItemFromUnavailable;
+    }
+
+    public By getPriceItemFromUnavailable() {
+        return priceItemFromUnavailable;
+    }
+
+    public By getTitleItemFromUnavailable() {
+        return titleItemFromUnavailable;
+    }
+
 
     public By getLabel1ItemOnBasket() {
         return label1ItemOnBasket;

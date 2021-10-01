@@ -162,16 +162,11 @@ public class CartItemTest extends InitialClass {
         assertElementByText(cartPage.getSnackSuccessAddBasket(),"Товар добавлен в корзину!");
 
 
+
+
     }
 
 
-//    @Test
-//    public void assertAddBacketFloat() throws InterruptedException {
-//        openListing("10656190");
-//        clickOnElement(lPage.getImageItem());
-//        assertElementToElement(cartPage.getPrice(),cartPage.getPriceFloat(),50,1700,50,500,2);
-//
-//    }
 
 
 

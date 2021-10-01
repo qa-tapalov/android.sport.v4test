@@ -9,7 +9,7 @@ public class BasketTest extends InitialClass {
 
 
 
-    //верстка пустой корзины -
+    //верстка пустой корзины - https://testrail.app.local/testrail/index.php?/cases/view/727985
     @Test
     public void checkEmptyBasket(){
         clickOnElement(basketPage.getBasket());
@@ -21,7 +21,7 @@ public class BasketTest extends InitialClass {
         checkElementOnPage(basketPage.getBtnToCatalog());
 
     }
-    //верстка блока изменения города -
+    //верстка блока изменения города - https://testrail.app.local/testrail/index.php?/cases/view/727987
     @Test
     public void checkElementOnCityChooser(){
         clickOnElement(basketPage.getBasket());
@@ -40,7 +40,7 @@ public class BasketTest extends InitialClass {
 
     }
 
-    //изменение города из корзины
+    //изменение города из корзины - https://testrail.app.local/testrail/index.php?/cases/view/727987
     @Test
     public void changeCity(){
         clickOnElement(basketPage.getBasket());
@@ -55,7 +55,7 @@ public class BasketTest extends InitialClass {
     }
 
 
-    //верстка корзины с товарами
+    //верстка корзины с товарами - https://testrail.app.local/testrail/index.php?/cases/view/727986
     @Test
     public void addItemInBasket() throws InterruptedException {
         openListing("беговая дорожка");
@@ -68,7 +68,7 @@ public class BasketTest extends InitialClass {
         checkElementOnPage(basketPage.getBtnMain());
     }
 
-    // переход на кт
+    // переход на кт - https://testrail.app.local/testrail/index.php?/cases/view/727989
     @Test
     public void openCartItemFromBasket() throws InterruptedException {
         openListing("10542186");
@@ -86,7 +86,7 @@ public class BasketTest extends InitialClass {
 
     }
 
-    //отображение и кликабельность лейблов
+    //отображение и кликабельность лейблов - https://testrail.app.local/testrail/index.php?/cases/view/727991
     @Test
     public void checkLabelOnItem() throws InterruptedException {
         addItemOnBasket("10542186",1);
@@ -100,9 +100,30 @@ public class BasketTest extends InitialClass {
 
     }
 
-    //блок тотал
+    //блок тотал - https://testrail.app.local/testrail/index.php?/cases/view/727996
+    @Test
+    public void checkBoxTotal() throws InterruptedException {
+        addItemOnBasket("беговая дорожка",1);
+        checkElementOnPage(basketPage.getTotalBox());
+        checkElementOnPage(basketPage.getTotalItemCount());
+        checkElementOnPage(basketPage.getTotalItemCountSum());
 
 
-    //отображение блока "нет в наличии"
+    }
+
+
+    //отображение блока "нет в наличии" - https://testrail.app.local/testrail/index.php?/cases/view/728005
+    @Test
+    public void unavailableBox() throws InterruptedException {
+      addItemOnBasket("10626602",3);
+      checkElementOnPage(basketPage.getItemUnavailableBox());
+      checkElementOnPage(basketPage.getDeleteAllFromUnavailable());
+      checkElementOnPage(basketPage.getDescItemFromUnavailable());
+      checkElementOnPage(basketPage.getImageItemFromUnavailable());
+      checkElementOnPage(basketPage.getTitleItemFromUnavailable());
+      checkElementOnPage(basketPage.getColorItemFromUnavailable());
+      checkElementOnPage(basketPage.getPriceItemFromUnavailable());
+
+    }
 
 }

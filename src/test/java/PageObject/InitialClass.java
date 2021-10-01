@@ -43,6 +43,8 @@ public class InitialClass extends BaseClass{
     public void addItemOnBasket(String id, int x) throws InterruptedException {
         openListing(id);
         //1 означает, что для данного товара присутствует выбор размера
+        //2 означает что для данного товара нет выбора размера
+        //3 добавляет в корзину с КТ
         if (x==1){
             clickOnElement(lPage.getBasketBtn());
             clickOnElement(lPage.getSizeElement1());
@@ -52,11 +54,21 @@ public class InitialClass extends BaseClass{
             clickOnElement(basketPage.getBasket());
 
         }
-       else{
+       else if(x==2){
             clickOnElement(lPage.getBasketBtn());
             checkElementOnPage(cartPage.getSnackSuccessAddBasket());
             tapByCoordinates(100,250);
             clickOnElement(basketPage.getBasket());
+        }
+        else if(x==3){
+            clickOnElement(lPage.imageItem);
+            scrollByCoord(50,1700,50,500,1);
+            clickOnElement(cartPage.getAddBasketMain());
+            checkElementOnPage(cartPage.getSnackSuccessAddBasket());
+            tapByCoordinates(100,250);
+            clickOnElement(basketPage.getBasket());
+
+
         }
 
     }
