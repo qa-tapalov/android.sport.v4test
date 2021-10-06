@@ -33,7 +33,13 @@ public class ListingPage extends BaseClass {
     private final By groupSize = MobileBy.id("ru.sportmaster.app.v4:id/sizesChoiser");
     private final By tableSize = MobileBy.id("ru.sportmaster.app.v4:id/table_size_link");
     private final By sizeChooser = MobileBy.id("ru.sportmaster.app.v4:id/sizes");
-    private final By sizeElement1 = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[1]\n");
+    private final By sizeElement1 = MobileBy.xpath("//android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[1]");
+    private final By sizeElement2 = MobileBy.xpath("//android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[2]");
+    private final By sizeElement3 = MobileBy.xpath("//android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[3]");
+    private final By sizeElement4 = MobileBy.xpath("//android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[4]");
+    private final By sizeElement5 = MobileBy.xpath("//android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[5]");
+
+
     private final By addBasketBtn = MobileBy.id("ru.sportmaster.app.v4:id/order");
 
 
@@ -59,6 +65,22 @@ public class ListingPage extends BaseClass {
 
     public By getSizeElement1() {
         return sizeElement1;
+    }
+
+    public By getSizeElement2() {
+        return sizeElement2;
+    }
+
+    public By getSizeElement3() {
+        return sizeElement3;
+    }
+
+    public By getSizeElement4() {
+        return sizeElement4;
+    }
+
+    public By getSizeElement5() {
+        return sizeElement5;
     }
 
     public By getTableSize() {

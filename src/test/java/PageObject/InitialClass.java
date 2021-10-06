@@ -47,7 +47,7 @@ public class InitialClass extends BaseClass{
         //3 добавляет в корзину с КТ
         if (x==1){
             clickOnElement(lPage.getBasketBtn());
-            clickOnElement(lPage.getSizeElement1());
+            chooseAvailableSize();
             clickOnElement(lPage.getAddBasketBtn());
             checkElementOnPage(cartPage.getSnackSuccessAddBasket());
             tapByCoordinates(100,250);
@@ -69,6 +69,29 @@ public class InitialClass extends BaseClass{
             clickOnElement(basketPage.getBasket());
 
 
+        }
+
+    }
+
+
+
+    //обработчик доступного размера
+    public void chooseAvailableSize(){
+        final By[] size = {
+                lPage.getSizeElement1(),
+                lPage.getSizeElement2(),
+                lPage.getSizeElement3(),
+                lPage.getSizeElement4(),
+                lPage.getSizeElement5(),
+        };
+
+        for (int i = 0; i < 6; i++){
+            wait.until(ExpectedConditions.presenceOfElementLocated(size[i]));
+            clickOnElement(size[i]);
+            if (driver.findElement(size[i]).isEnabled()) {
+
+                break;
+            }
         }
 
     }

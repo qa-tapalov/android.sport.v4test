@@ -1,7 +1,10 @@
 package Tests;
 
-import org.junit.Test;
 import PageObject.InitialClass;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Link;
+import org.junit.Test;
 
 public class CatalogTest extends InitialClass {
 
@@ -9,6 +12,9 @@ public class CatalogTest extends InitialClass {
     //проверка наличия элементов в каталоге
     //https://testrail.app.local/testrail/index.php?/cases/view/671781
     @Test
+    @Epic("Каталог приложения")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/671781")
+    @Description("проверка наличия элементов в каталоге ")
     public void checkElementsOnCatalog() {
         clickOnElement(cPage.getCatalog());
         checkElementOnPage(cPage.getSearchBar());
@@ -20,9 +26,11 @@ public class CatalogTest extends InitialClass {
     }
 
 
-    //проверка наличия элементов на 2-3 уровнях каталога
     //https://testrail.app.local/testrail/index.php?/cases/view/671788
     @Test
+    @Epic("Каталог приложения")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/671788")
+    @Description("проверка наличия элементов на 2-3 уровнях каталога")
     public void checkSubCategoryRazdel(){
         clickOnElement(cPage.getCatalog());
         clickOnElement(cPage.getCategory());
@@ -36,7 +44,9 @@ public class CatalogTest extends InitialClass {
     }
 
     @Test
-    //Проверка появление блока ранее просмотренных товаров
+    @Epic("Каталог приложения")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/671800")
+    @Description("Проверка появление блока ранее просмотренных товаров")
     public void checkResentlyWatched() throws InterruptedException {
         clickOnElement(cPage.getCatalog());
         Thread.sleep(1000);

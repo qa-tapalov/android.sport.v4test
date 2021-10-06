@@ -21,6 +21,16 @@ public class AuthorizationTest extends InitialClass {
 
     }
 
+    @Test
+    public void sendIncorrectCode(){
+        clickOnElement(authPage.getProfilePage());
+        sendKeys(authPage.getPhoneEdit(),"9999999999");
+        clickOnElement(authPage.getAuthBtn());
+        sendKeys(authPage.getSendCodeBar(),"1111");
+        checkElementOnPage(authPage.getIncorrectCode());
+
+    }
+
 //авторизация по номеру телефона, используя автоподтановку кода, средствами андроида
 //    @Test
 //    public void authWithNumber() throws InterruptedException{

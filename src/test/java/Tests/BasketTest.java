@@ -71,13 +71,7 @@ public class BasketTest extends InitialClass {
     // переход на кт - https://testrail.app.local/testrail/index.php?/cases/view/727989
     @Test
     public void openCartItemFromBasket() throws InterruptedException {
-        openListing("10542186");
-        clickOnElement(lPage.getBasketBtn());
-        clickOnElement(lPage.getSizeElement1());
-        clickOnElement(lPage.getAddBasketBtn());
-        checkElementOnPage(cartPage.getSnackSuccessAddBasket());
-        tapByCoordinates(100,250);
-        clickOnElement(basketPage.getBasket());
+        addItemOnBasket("10542186",1);
         clickOnElement(basketPage.getImageItemOnBasket());
         checkElementOnPage(cartPage.getNameItem());
         MobileElement nameItem = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(cartPage.getNameItem()));
