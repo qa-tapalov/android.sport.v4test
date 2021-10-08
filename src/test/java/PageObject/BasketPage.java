@@ -54,6 +54,15 @@ public class BasketPage extends BaseClass {
     private final By titleItemFromUnavailable = MobileBy.id("ru.sportmaster.app.v4:id/title_tv");
     private final By colorItemFromUnavailable = MobileBy.id("ru.sportmaster.app.v4:id/color_tv");
     private final By priceItemFromUnavailable = MobileBy.id("ru.sportmaster.app.v4:id/price_tv");
+    //кредит
+    private final By creditConteiner = MobileBy.xpath("//androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[1]");
+    private final By creditIcon = MobileBy.id("ru.sportmaster.app.v4:id/iconPlace");
+    private final By creditTitle = MobileBy.xpath("//androidx.appcompat.widget.LinearLayoutCompat[1]/androidx.appcompat.widget.LinearLayoutCompat/androidx.appcompat.widget.LinearLayoutCompat/android.widget.TextView");
+    private final By creditLable = MobileBy.xpath("//androidx.appcompat.widget.LinearLayoutCompat[1]/androidx.appcompat.widget.LinearLayoutCompat/androidx.appcompat.widget.LinearLayoutCompat/android.widget.ImageView");
+    private final By creditDesc = MobileBy.xpath("//androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[1]/androidx.appcompat.widget.LinearLayoutCompat/android.widget.TextView");
+    private final By creditDetailsIcon = MobileBy.id("ru.sportmaster.app.v4:id/iconDetails");
+
+
     //тотал
     private final By totalItemCount = MobileBy.id("ru.sportmaster.app.v4:id/amount_title_tv");
     private final By totalItemCountSum = MobileBy.id("ru.sportmaster.app.v4:id/old_total_amount_tv");
@@ -250,6 +259,30 @@ public class BasketPage extends BaseClass {
 
     public By getTitleChooserCity() {
         return titleChooserCity;
+    }
+
+    public By getCreditConteiner() {
+        return creditConteiner;
+    }
+
+    public By getCreditDesc() {
+        return creditDesc;
+    }
+
+    public By getCreditDetailsIcon() {
+        return creditDetailsIcon;
+    }
+
+    public By getCreditIcon() {
+        return creditIcon;
+    }
+
+    public By getCreditLable() {
+        return creditLable;
+    }
+
+    public By getCreditTitle() {
+        return creditTitle;
     }
 
 }

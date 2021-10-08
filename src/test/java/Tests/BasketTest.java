@@ -31,10 +31,9 @@ public class BasketTest extends InitialClass {
     @Test
     @Epic("Корзина")
     @Story("Первый экран корзины")
-    @Feature("Список товаров")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/727986")
     @Description("Верстка корзины с товарами")
-    public void addItemInBasket() throws InterruptedException {
+    public void itemsInBasket() throws InterruptedException {
         addItemOnBasket("беговая дорожка",1);
         clickOnElement(basketPage.getBasket());
         checkElementOnPage(basketPage.getBtnMain());
@@ -108,6 +107,7 @@ public class BasketTest extends InitialClass {
     @Feature("Список товаров")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/727991")
     @Description("Отображение и кликабельность лейблов у товара")
+    @Step
     public void checkLabelOnItem() throws InterruptedException {
         addItemOnBasket("10542186",1);
         checkElementOnPage(basketPage.getLabel2ItemOnBasket());
@@ -155,5 +155,24 @@ public class BasketTest extends InitialClass {
       checkElementOnPage(basketPage.getPriceItemFromUnavailable());
 
     }
+
+    @Test
+    @Epic("Корзина")
+    @Story("Первый экран корзины")
+    @Feature("Кредит")
+    @Link("")
+    @Description("Проверка блока кредит и его элементов")
+    public void checkBoxCredit() throws InterruptedException {
+        addItemOnBasket("кроссовки",1);
+        checkElementOnPage(basketPage.getCreditConteiner());
+        checkElementOnPage(basketPage.getCreditIcon());
+        checkElementOnPage(basketPage.getCreditLable());
+        checkElementOnPage(basketPage.getCreditTitle());
+        checkElementOnPage(basketPage.getCreditDetailsIcon());
+        checkElementOnPage(basketPage.getCreditDesc());
+
+    }
+
+
 
 }

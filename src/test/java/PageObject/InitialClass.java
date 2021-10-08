@@ -85,10 +85,10 @@ public class InitialClass extends BaseClass{
                 lPage.getSizeElement5(),
         };
 
-        for (int i = 0; i < 6; i++){
-            wait.until(ExpectedConditions.presenceOfElementLocated(size[i]));
-            clickOnElement(size[i]);
-            if (driver.findElement(size[i]).isEnabled()) {
+        for (By by : size) {
+            wait.until(ExpectedConditions.presenceOfElementLocated(by));
+            clickOnElement(by);
+            if (driver.findElement(by).isEnabled()) {
 
                 break;
             }
@@ -150,6 +150,7 @@ public class InitialClass extends BaseClass{
                     .release()
                     .perform();
         }
+        System.out.println("Scroll screen");
     }
 
     //Horizontal Swipe by percentages
