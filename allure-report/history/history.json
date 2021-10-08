@@ -1,0 +1,53 @@
+{
+  "Tests.CatalogTest:Tests.CatalogTest#checkSubCategoryRazdel" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3114541f558801a5",
+      "status" : "passed",
+      "time" : {
+        "duration" : 20597
+      }
+    } ]
+  },
+  "Tests.CatalogTest:Tests.CatalogTest#checkElementsOnCatalog" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d512468acab39209",
+      "status" : "passed",
+      "time" : {
+        "duration" : 17032
+      }
+    } ]
+  },
+  "Tests.CatalogTest:Tests.CatalogTest#checkResentlyWatched" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ce1747f6aa67f69a",
+      "status" : "passed",
+      "time" : {
+        "duration" : 38975
+      }
+    } ]
+  }
+}

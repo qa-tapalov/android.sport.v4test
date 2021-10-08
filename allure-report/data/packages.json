@@ -1,0 +1,42 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "Tests.CatalogTest",
+    "children" : [ {
+      "name" : "checkSubCategoryRazdel",
+      "uid" : "3114541f558801a5",
+      "parentUid" : "dd24d28545ba44188b78a0f0da62238f",
+      "status" : "passed",
+      "time" : {
+        "duration" : 20597
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "checkElementsOnCatalog",
+      "uid" : "d512468acab39209",
+      "parentUid" : "dd24d28545ba44188b78a0f0da62238f",
+      "status" : "passed",
+      "time" : {
+        "duration" : 17032
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "checkResentlyWatched",
+      "uid" : "ce1747f6aa67f69a",
+      "parentUid" : "dd24d28545ba44188b78a0f0da62238f",
+      "status" : "passed",
+      "time" : {
+        "duration" : 38975
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "Tests.CatalogTest"
+  } ]
+}

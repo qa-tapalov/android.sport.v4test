@@ -2,6 +2,7 @@ package Tests;
 
 import PageObject.InitialClass;
 import io.appium.java_client.MobileElement;
+import io.qameta.allure.*;
 import org.junit.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -9,8 +10,11 @@ public class BasketTest extends InitialClass {
 
 
 
-    //верстка пустой корзины - https://testrail.app.local/testrail/index.php?/cases/view/727985
     @Test
+    @Epic("Корзина")
+    @Story("Первый экран корзины")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/727985")
+    @Description("Верстка пустой корзины")
     public void checkEmptyBasket(){
         clickOnElement(basketPage.getBasket());
         assertElementByText(basketPage.getTitleBasket(),"Корзина");
@@ -21,8 +25,27 @@ public class BasketTest extends InitialClass {
         checkElementOnPage(basketPage.getBtnToCatalog());
 
     }
-    //верстка блока изменения города - https://testrail.app.local/testrail/index.php?/cases/view/727987
+
+
+    //добавить кредит, тотал и баннер
     @Test
+    @Epic("Корзина")
+    @Story("Первый экран корзины")
+    @Feature("Список товаров")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/727986")
+    @Description("Верстка корзины с товарами")
+    public void addItemInBasket() throws InterruptedException {
+        addItemOnBasket("беговая дорожка",1);
+        clickOnElement(basketPage.getBasket());
+        checkElementOnPage(basketPage.getBtnMain());
+    }
+
+    @Test
+    @Epic("Корзина")
+    @Story("Первый экран корзины")
+    @Feature("Изменение города")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/727987")
+    @Description("Верстка блока изменения города")
     public void checkElementOnCityChooser(){
         clickOnElement(basketPage.getBasket());
         clickOnElement(basketPage.getChooseCity());
@@ -36,12 +59,15 @@ public class BasketTest extends InitialClass {
         checkElementOnPage(basketPage.getSearchBarOnChooserCity());
 
 
-
-
     }
 
-    //изменение города из корзины - https://testrail.app.local/testrail/index.php?/cases/view/727987
+
     @Test
+    @Epic("Корзина")
+    @Story("Первый экран корзины")
+    @Feature("Изменение города")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/727987")
+    @Description("Изменение города в корзине")
     public void changeCity(){
         clickOnElement(basketPage.getBasket());
         MobileElement cityName = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(basketPage.getCityName()));
@@ -55,21 +81,16 @@ public class BasketTest extends InitialClass {
     }
 
 
-    //верстка корзины с товарами - https://testrail.app.local/testrail/index.php?/cases/view/727986
-    @Test
-    public void addItemInBasket() throws InterruptedException {
-        openListing("беговая дорожка");
-        clickOnElement(lPage.getBasketBtn());
-        clickOnElement(lPage.getSizeElement1());
-        clickOnElement(lPage.getAddBasketBtn());
-        checkElementOnPage(cartPage.getSnackSuccessAddBasket());
-        tapByCoordinates(100,250);
-        clickOnElement(basketPage.getBasket());
-        checkElementOnPage(basketPage.getBtnMain());
-    }
 
-    // переход на кт - https://testrail.app.local/testrail/index.php?/cases/view/727989
+
+
+
     @Test
+    @Epic("Корзина")
+    @Story("Первый экран корзины")
+    @Feature("Список товаров")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/727989")
+    @Description("Переход на КТ с корзины")
     public void openCartItemFromBasket() throws InterruptedException {
         addItemOnBasket("10542186",1);
         clickOnElement(basketPage.getImageItemOnBasket());
@@ -80,8 +101,13 @@ public class BasketTest extends InitialClass {
 
     }
 
-    //отображение и кликабельность лейблов - https://testrail.app.local/testrail/index.php?/cases/view/727991
+
     @Test
+    @Epic("Корзина")
+    @Story("Первый экран корзины")
+    @Feature("Список товаров")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/727991")
+    @Description("Отображение и кликабельность лейблов у товара")
     public void checkLabelOnItem() throws InterruptedException {
         addItemOnBasket("10542186",1);
         checkElementOnPage(basketPage.getLabel2ItemOnBasket());
@@ -94,8 +120,13 @@ public class BasketTest extends InitialClass {
 
     }
 
-    //блок тотал - https://testrail.app.local/testrail/index.php?/cases/view/727996
+
     @Test
+    @Epic("Корзина")
+    @Story("Первый экран корзины")
+    @Feature("Блок тотал")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/727996")
+    @Description("Отображение блока тотала при наличии товаров в корзине и проверка его элементов")
     public void checkBoxTotal() throws InterruptedException {
         addItemOnBasket("беговая дорожка",1);
         checkElementOnPage(basketPage.getTotalBox());
@@ -106,8 +137,13 @@ public class BasketTest extends InitialClass {
     }
 
 
-    //отображение блока "нет в наличии" - https://testrail.app.local/testrail/index.php?/cases/view/728005
+
     @Test
+    @Epic("Корзина")
+    @Story("Первый экран корзины")
+    @Feature("Блок 'нет в наличии'")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/728005")
+    @Description("Отображение блока нет в наличии и проверка его элементов")
     public void unavailableBox() throws InterruptedException {
       addItemOnBasket("10626602",3);
       checkElementOnPage(basketPage.getItemUnavailableBox());

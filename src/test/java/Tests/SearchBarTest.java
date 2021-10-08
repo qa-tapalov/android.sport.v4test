@@ -1,6 +1,10 @@
 package Tests;
 
 import io.appium.java_client.MobileElement;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Link;
 import org.junit.Test;
 import PageObject.InitialClass;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,9 +12,35 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class SearchBarTest extends InitialClass {
 
 
-    //проверка кликабельности подсказки
-    //https://testrail.app.local/testrail/index.php?/cases/view/678832
+
     @Test
+    @Epic("Каталог")
+    @Feature("Поиск")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/678830")
+    @Description("Проверка наличия элементов в поиске")
+    public void checkElementsOnSearch(){
+        clickOnElement(cPage.getCatalog());
+        clickOnElement(sBar.getSearchbar());
+        sendKeys(sBar.getSearchbar(),"кроссовки");
+        checkElementOnPage(sBar.getTapView());
+        checkElementOnPage(sBar.getTap1());
+        checkElementOnPage(sBar.getTap2());
+        checkElementOnPage(sBar.getTap3());
+        checkElementOnPage(sBar.getHint1());
+        checkElementOnPage(sBar.getHint2());
+        checkElementOnPage(sBar.getHint3());
+        checkElementOnPage(sBar.getCartItemFromSearch1());
+        checkElementOnPage(sBar.getCartItemFromSearch2());
+        checkElementOnPage(sBar.getCartItemFromSearch3());
+
+    }
+
+
+    @Test
+    @Epic("Каталог")
+    @Feature("Поиск")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/678832")
+    @Description("Проверка работы подсказок")
     public void checkTapOnSearch(){
 
         clickOnElement(cPage.getCatalog());
@@ -21,30 +51,15 @@ public class SearchBarTest extends InitialClass {
 
     }
 
-    //проверка наличия элементов в поиске
-    //https://testrail.app.local/testrail/index.php?/cases/view/678830
+
+
+
+
     @Test
-    public void checkElementsOnSearch(){
-        clickOnElement(cPage.getCatalog());
-        clickOnElement(sBar.getSearchbar());
-        sendKeys(sBar.getSearchbar(),"кроссовки");
-        checkElementOnPage(sBar.getTapView());
-        checkElementOnPage(sBar.getTap1());
-        checkElementOnPage(sBar.getTap2());
-        checkElementOnPage(sBar.getTap3());
-//        checkElementOnPage(sBar.getHint1());
-//        checkElementOnPage(sBar.getHint2());
-//        checkElementOnPage(sBar.getHint3());
-//        checkElementOnPage(sBar.getCartItemFromSearch1());
-//        checkElementOnPage(sBar.getCartItemFromSearch2());
-//        checkElementOnPage(sBar.getCartItemFromSearch3());
-
-    }
-
-
-    //переход на КТ из поиска
-    //https://testrail.app.local/testrail/index.php?/cases/view/678890
-    @Test
+    @Epic("Каталог")
+    @Feature("Поиск")
+    @Link("https://testrail.app.local/testrail/index.php?/cases/view/678890")
+    @Description("Переход на КТ из поиска")
     public void cartItemFromSearch(){
        clickOnElement(cPage.getCatalog());
        clickOnElement(sBar.getSearchbar());

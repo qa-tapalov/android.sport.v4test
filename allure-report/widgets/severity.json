@@ -1,0 +1,25 @@
+[ {
+  "uid" : "3114541f558801a5",
+  "name" : "checkSubCategoryRazdel",
+  "time" : {
+    "duration" : 20597
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d512468acab39209",
+  "name" : "checkElementsOnCatalog",
+  "time" : {
+    "duration" : 17032
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ce1747f6aa67f69a",
+  "name" : "checkResentlyWatched",
+  "time" : {
+    "duration" : 38975
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

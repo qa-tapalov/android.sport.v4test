@@ -1,0 +1,53 @@
+{
+  "uid" : "d512468acab39209",
+  "name" : "checkElementsOnCatalog",
+  "historyId" : "Tests.CatalogTest:Tests.CatalogTest#checkElementsOnCatalog",
+  "time" : {
+    "duration" : 17032
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "4e6fb09a3ca98bfc",
+      "name" : "System out",
+      "source" : "4e6fb09a3ca98bfc.txt",
+      "type" : "text/plain",
+      "size" : 288
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "resultFormat",
+    "value" : "junit"
+  }, {
+    "name" : "suite",
+    "value" : "Tests.CatalogTest"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.CatalogTest"
+  }, {
+    "name" : "package",
+    "value" : "Tests.CatalogTest"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d512468acab39209.json",
+  "parameterValues" : [ ]
+}
