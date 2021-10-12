@@ -77,6 +77,25 @@ public class InitialClass extends BaseClass{
 
     }
 
+    //добавление нескольких товаров в корзину с плитки товаров
+    @Step
+    public void addItemsOnBasketFromListing(String[] args) throws InterruptedException {
+
+        for (String i : args){
+            clickOnElement(cPage.getSearchBar());
+            driver.findElement(cPage.getSearchBar()).sendKeys(i);
+            Thread.sleep(1500);
+            tapByCoordinates(981, 1913);
+            clickOnElement(lPage.getBasketBtn());
+            chooseAvailableSize();
+            clickOnElement(lPage.getAddBasketBtn());
+            checkElementOnPage(cartPage.getSnackSuccessAddBasket());
+            tapByCoordinates(100,250);
+
+        }
+
+    }
+
 
 
     //обработчик доступного размера в товарной плитке

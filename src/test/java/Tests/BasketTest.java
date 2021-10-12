@@ -12,7 +12,7 @@ public class BasketTest extends InitialClass {
 
     @Test
     @Epic("Корзина")
-    @Story("Первый экран корзины")
+    @Feature("Первый экран корзины")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/727985")
     @Description("Верстка пустой корзины")
     public void checkEmptyBasket(){
@@ -30,12 +30,11 @@ public class BasketTest extends InitialClass {
     //добавить кредит, тотал и баннер
     @Test
     @Epic("Корзина")
-    @Story("Первый экран корзины")
+    @Feature("Первый экран корзины")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/727986")
     @Description("Верстка корзины с товарами")
     public void itemsInBasket() throws InterruptedException {
         addItemOnBasket("10610426",1);
-        clickOnElement(basketPage.getBasket());
         checkElementOnPage(basketPage.getBtnMain());
         checkElementOnPage(basketPage.getCreditConteiner());
         checkElementOnPage(basketPage.getMotivationBanner());
@@ -43,8 +42,8 @@ public class BasketTest extends InitialClass {
 
     @Test
     @Epic("Корзина")
-    @Story("Первый экран корзины")
-    @Feature("Изменение города")
+    @Feature("Первый экран корзины")
+    @Story("Изменение города")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/727987")
     @Description("Верстка блока изменения города")
     public void checkElementOnCityChooser(){
@@ -65,8 +64,8 @@ public class BasketTest extends InitialClass {
 
     @Test
     @Epic("Корзина")
-    @Story("Первый экран корзины")
-    @Feature("Изменение города")
+    @Feature("Первый экран корзины")
+    @Story("Изменение города")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/727987")
     @Description("Изменение города в корзине")
     public void changeCity(){
@@ -88,8 +87,8 @@ public class BasketTest extends InitialClass {
 
     @Test
     @Epic("Корзина")
-    @Story("Первый экран корзины")
-    @Feature("Список товаров")
+    @Feature("Первый экран корзины")
+    @Story("Список товаров")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/727989")
     @Description("Переход на КТ с корзины")
     public void openCartItemFromBasket() throws InterruptedException {
@@ -105,8 +104,8 @@ public class BasketTest extends InitialClass {
 
     @Test
     @Epic("Корзина")
-    @Story("Первый экран корзины")
-    @Feature("Список товаров")
+    @Feature("Первый экран корзины")
+    @Story("Список товаров")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/727991")
     @Description("Отображение и кликабельность лейблов у товара")
     @Step
@@ -125,8 +124,8 @@ public class BasketTest extends InitialClass {
 
     @Test
     @Epic("Корзина")
-    @Story("Первый экран корзины")
-    @Feature("Блок тотал")
+    @Feature("Первый экран корзины")
+    @Story("Блок тотал")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/727996")
     @Description("Отображение блока тотала при наличии товаров в корзине и проверка его элементов")
     public void checkBoxTotal() throws InterruptedException {
@@ -142,8 +141,8 @@ public class BasketTest extends InitialClass {
 
     @Test
     @Epic("Корзина")
-    @Story("Первый экран корзины")
-    @Feature("Блок 'нет в наличии'")
+    @Feature("Первый экран корзины")
+    @Story("Блок 'нет в наличии'")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/728005")
     @Description("Отображение блока нет в наличии и проверка его элементов")
     public void unavailableBox() throws InterruptedException {
@@ -160,8 +159,8 @@ public class BasketTest extends InitialClass {
 
     @Test
     @Epic("Корзина")
-    @Story("Первый экран корзины")
-    @Feature("Кредит")
+    @Feature("Первый экран корзины")
+    @Story("Кредит")
     @Link("")
     @Description("Проверка блока кредит и его элементов")
     public void checkBoxCredit() throws InterruptedException {
@@ -174,6 +173,25 @@ public class BasketTest extends InitialClass {
         checkElementOnPage(basketPage.getCreditDesc());
 
     }
+    @Test
+    @Epic("Корзина")
+    @Feature("Второй экран корзины")
+    @Story("Кредит")
+    @Link("")
+    @Description("Проверка блока кредит и его элементов")
+    public void availableForPickupInSingleStoreTrue() throws InterruptedException {
+        clickOnElement(cPage.getCatalog());
+        addItemsOnBasketFromListing(new String[]{"кроссовки","беговая дорожка","куртка",});
+
+
+
+
+
+
+
+
+    }
+
 
 
 
