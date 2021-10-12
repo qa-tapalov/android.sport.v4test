@@ -62,6 +62,9 @@ public class BasketPage extends BaseClass {
     private final By creditDesc = MobileBy.xpath("//androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[1]/androidx.appcompat.widget.LinearLayoutCompat/android.widget.TextView");
     private final By creditDetailsIcon = MobileBy.id("ru.sportmaster.app.v4:id/iconDetails");
 
+    //МОТИВАЦИОННЫЙ БАННЕР
+    private final By motivationBanner= MobileBy.xpath("//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat");
+
 
     //тотал
     private final By totalItemCount = MobileBy.id("ru.sportmaster.app.v4:id/amount_title_tv");
@@ -285,4 +288,7 @@ public class BasketPage extends BaseClass {
         return creditTitle;
     }
 
+    public By getMotivationBanner() {
+        return motivationBanner;
+    }
 }

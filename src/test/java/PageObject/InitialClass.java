@@ -7,6 +7,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -29,7 +30,9 @@ public class InitialClass extends BaseClass{
     public BasketPage basketPage = new BasketPage();
 
 
+
     //открытие плитки через поиск
+    @Step
     public void openListing(String keys) throws InterruptedException {
 
         clickOnElement(cPage.getCatalog());
@@ -40,6 +43,7 @@ public class InitialClass extends BaseClass{
     }
 
     //добавление товара в корзину и переход в корзину.
+    @Step
     public void addItemOnBasket(String id, int x) throws InterruptedException {
         openListing(id);
         //1 означает, что для данного товара присутствует выбор размера
@@ -75,7 +79,8 @@ public class InitialClass extends BaseClass{
 
 
 
-    //обработчик доступного размера
+    //обработчик доступного размера в товарной плитке
+    @Step
     public void chooseAvailableSize(){
         final By[] size = {
                 lPage.getSizeElement1(),
@@ -96,8 +101,31 @@ public class InitialClass extends BaseClass{
 
     }
 
+    //обработчик доступного размера в карточке товара
+    @Step
+    public void chooseAvailableSizeOnCart(){
+        final By[] size = {
+                cartPage.getSizeItem1(),
+                cartPage.getSizeItem2(),
+                cartPage.getSizeItem3(),
+                cartPage.getSizeItem4(),
+                cartPage.getSizeItem5(),
+
+        };
+
+        for (By by : size) {
+            wait.until(ExpectedConditions.presenceOfElementLocated(by));
+            clickOnElement(by);
+            if (driver.findElement(by).isEnabled()) {
+
+                break;
+            }
+        }
+
+    }
 
     //Click on element
+    @Step
     public void clickOnElement(By element){
 
        wait.until(ExpectedConditions.presenceOfElementLocated(element));
@@ -108,6 +136,7 @@ public class InitialClass extends BaseClass{
     }
 
     //checking for the presence of an element
+    @Step
     public void checkElementOnPage(By element){
 
         try{
@@ -131,7 +160,7 @@ public class InitialClass extends BaseClass{
 //        BaseClass.driver.findElement(keys);
 //    }
 
-
+    @Step
     public void sendKeys(By element, String keys){
         wait.until(ExpectedConditions.presenceOfElementLocated(element));
         driver.findElement(element).sendKeys(keys);
@@ -139,6 +168,7 @@ public class InitialClass extends BaseClass{
     }
 
     //Scroll by coordinates
+    @Step
     public void scrollByCoord( int x1, int y1, int x2, int y2, int j) throws InterruptedException {
         AndroidTouchAction action = new AndroidTouchAction(driver);
 
@@ -154,6 +184,7 @@ public class InitialClass extends BaseClass{
     }
 
     //Horizontal Swipe by percentages
+    @Step
     public void horizontalSwipeByPercentage (double startPercentage, double endPercentage, double anchorPercentage) {
         Dimension size = driver.manage().window().getSize();
         int anchor = (int) (size.height * anchorPercentage);
@@ -169,6 +200,7 @@ public class InitialClass extends BaseClass{
     }
 
     //Tap by coordinates
+    @Step
     public void tapByCoordinates (int x,  int y) {
         AndroidTouchAction action = new AndroidTouchAction(driver);
 
@@ -178,6 +210,7 @@ public class InitialClass extends BaseClass{
     }
 
     //Vertical Swipe by percentages
+    @Step
     public void verticalSwipeByPercentages(double startPercentage, double endPercentage, double anchorPercentage) {
         Dimension size = driver.manage().window().getSize();
         int anchor = (int) (size.width * anchorPercentage);
@@ -194,6 +227,7 @@ public class InitialClass extends BaseClass{
 
 
     //Press by element
+    @Step
     public void pressByElement (AndroidElement element, long seconds) {
         AndroidTouchAction action = new AndroidTouchAction(driver);
 
@@ -206,6 +240,7 @@ public class InitialClass extends BaseClass{
 
 
     //Press by coordinates
+    @Step
     public void pressByCoordinates (int x, int y, long seconds) {
         AndroidTouchAction action = new AndroidTouchAction(driver);
 
@@ -217,6 +252,7 @@ public class InitialClass extends BaseClass{
     }
 
     //Swipe by elements
+    @Step
     public void swipeByElements (AndroidElement startElement, AndroidElement endElement) {
         AndroidTouchAction action = new AndroidTouchAction(driver);
 
@@ -279,6 +315,7 @@ public class InitialClass extends BaseClass{
 
 
     //checking if element is displayed
+    @Step
     public void isElementDisplayed(By element) throws InterruptedException {
         Thread.sleep(2000);
         try{
@@ -291,6 +328,7 @@ public class InitialClass extends BaseClass{
     }
 
     //Assert element
+    @Step
     public void assertElementByText(By element, String keys){
        MobileElement compare = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(element));
         if (compare.getText().equals(keys)){
@@ -304,6 +342,7 @@ public class InitialClass extends BaseClass{
     }
 
     // assert element to element
+    @Step
     public void assertElementToElement(By element1, By element2, int x1, int y1, int x2, int y2, int j) throws InterruptedException {
         MobileElement compare1 = (MobileElement) wait.until(ExpectedConditions.presenceOfElementLocated(element1));
         compare1.getText();

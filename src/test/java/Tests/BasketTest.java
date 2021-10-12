@@ -34,9 +34,11 @@ public class BasketTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/727986")
     @Description("Верстка корзины с товарами")
     public void itemsInBasket() throws InterruptedException {
-        addItemOnBasket("беговая дорожка",1);
+        addItemOnBasket("10610426",1);
         clickOnElement(basketPage.getBasket());
         checkElementOnPage(basketPage.getBtnMain());
+        checkElementOnPage(basketPage.getCreditConteiner());
+        checkElementOnPage(basketPage.getMotivationBanner());
     }
 
     @Test

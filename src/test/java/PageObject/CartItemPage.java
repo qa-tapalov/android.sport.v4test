@@ -35,7 +35,16 @@ public class CartItemPage extends BaseClass {
     private final By colorImage = MobileBy.id("ru.sportmaster.app.v4:id/colorImage");
     private final By sizeGroup = MobileBy.id("ru.sportmaster.app.v4:id/sizeGroup");
     private final By sizesChoiser = MobileBy.id("ru.sportmaster.app.v4:id/sizesChoiser");
-    private final By sizeItem = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView[2]/androidx.cardview.widget.CardView[1]");
+    private final By sizeItem1 = MobileBy.xpath("//android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView[2]/androidx.cardview.widget.CardView[1]");
+    private final By sizeItem2 = MobileBy.xpath("//android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView[2]/androidx.cardview.widget.CardView[2]");
+    private final By sizeItem3 = MobileBy.xpath("//android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView[2]/androidx.cardview.widget.CardView[3]");
+    private final By sizeItem4 = MobileBy.xpath("//android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView[2]/androidx.cardview.widget.CardView[4]");
+    private final By sizeItem5 = MobileBy.xpath("//android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView[2]/androidx.cardview.widget.CardView[5]");
+
+
+
+
+
     private final By table_size_link = MobileBy.id("ru.sportmaster.app.v4:id/table_size_link");
     private final By closeTableBtn = MobileBy.id("ru.sportmaster.app.v4:id/closeButton");
     private final By titleTable = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.TextView");
@@ -92,8 +101,24 @@ public class CartItemPage extends BaseClass {
     }
 
 
-    public By getSizeItem() {
-        return sizeItem;
+    public By getSizeItem1() {
+        return sizeItem1;
+    }
+
+    public By getSizeItem2() {
+        return sizeItem2;
+    }
+
+    public By getSizeItem3() {
+        return sizeItem3;
+    }
+
+    public By getSizeItem4() {
+        return sizeItem4;
+    }
+
+    public By getSizeItem5() {
+        return sizeItem5;
     }
 
     public By getSnackSuccessAddBasket() { return snackSuccessAddBasket; }

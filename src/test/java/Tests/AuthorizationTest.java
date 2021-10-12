@@ -1,12 +1,18 @@
 package Tests;
 
 import PageObject.InitialClass;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Link;
 import org.junit.Test;
 
 public class AuthorizationTest extends InitialClass {
 
 
-    // проверка наличия элементов на экране авторизации
+
+    @Epic("Авторизация")
+    @Link("")
+    @Description("Проверка наличия элементов на экране авторизации")
     @Test
     public void checkAuthPage() {
         clickOnElement(authPage.getProfilePage());
@@ -21,6 +27,9 @@ public class AuthorizationTest extends InitialClass {
 
     }
 
+    @Epic("Авторизация")
+    @Link("")
+    @Description("Появление алерта ошибки при вводе неверного кода подтверждения")
     @Test
     public void sendIncorrectCode() {
         clickOnElement(authPage.getProfilePage());

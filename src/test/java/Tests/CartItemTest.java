@@ -144,7 +144,7 @@ public class CartItemTest extends InitialClass {
         scrollByCoord(50,1700,50,500,1);
         isElementDisplayed(cartPage.getPickup_title());
         assertElementByText(cartPage.getDefaultState(), "Для отображения наличия, выберите размер");
-        clickOnElement(cartPage.getSizeItem());
+        clickOnElement(cartPage.getSizeItem1());
         isElementDisplayed(cartPage.getPickup_title());
     }
 
@@ -195,7 +195,7 @@ public class CartItemTest extends InitialClass {
         openListing("10642580");
         clickOnElement(lPage.getImageItem());
         scrollByCoord(50,1700,50,500,1);
-        clickOnElement(cartPage.getSizeItem());
+        clickOnElement(cartPage.getSizeItem1());
         clickOnElement(cartPage.getAddBasketMain());
         checkElementOnPage(cartPage.getSnackSuccessAddBasket());
         assertElementByText(cartPage.getSnackSuccessAddBasket(),"Товар добавлен в корзину!");
@@ -213,7 +213,7 @@ public class CartItemTest extends InitialClass {
         openListing("10642580");
         clickOnElement(lPage.getImageItem());
         scrollByCoord(50,1700,50,500,1);
-        clickOnElement(cartPage.getSizeItem());
+        clickOnElement(cartPage.getSizeItem1());
         scrollByCoord(50,1700,50,500,2);
         clickOnElement(cartPage.getAddBasketFloatBtn());
         checkElementOnPage(cartPage.getSnackSuccessAddBasket());
