@@ -8,9 +8,18 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 import io.qameta.allure.Step;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
@@ -28,8 +37,34 @@ public class InitialClass extends BaseClass{
     public ListingPage lPage = new ListingPage();
     public CartItemPage cartPage = new CartItemPage();
     public BasketPage basketPage = new BasketPage();
+    public MainPage mainPage = new MainPage();
+    public OnboardPage onboardPage = new OnboardPage();
+    public ProfilePage profilePage = new ProfilePage();
 
 
+    //создание скриншота
+    public void screenShot(){
+        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+
+
+
+    }
+
+    public void captureScreenShots() throws IOException {
+        String folder_name;
+        DateFormat df;
+        folder_name="screenshot";
+        File f=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        //Date format fot screenshot file name
+        df=new SimpleDateFormat("dd-MMM-yyyy__hh_mm_ssaa");
+        //create dir with given folder name
+        new File(folder_name).mkdir();
+        //Setting file name
+        String file_name=df.format(new Date())+".png";
+        //coppy screenshot file into screenshot folder.
+        FileUtils.copyFile(f, new File(folder_name + "/" + file_name));
+    }
 
     //открытие плитки через поиск
     @Step
@@ -156,6 +191,7 @@ public class InitialClass extends BaseClass{
 
     //checking for the presence of an element
     @Step
+
     public void checkElementOnPage(By element){
 
         try{
@@ -378,5 +414,20 @@ public class InitialClass extends BaseClass{
 
     }
 
+
+    //enabled elements
+    public void isElementEnabled(By element){
+
+        if (driver.findElement(element).isEnabled()) {
+
+            System.out.println("Element is enabled: " + element);
+        }
+        else{
+            System.out.println("Element is not enabled: " + element);
+
+
+        }
+
+    }
 
 }

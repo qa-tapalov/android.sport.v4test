@@ -19,6 +19,7 @@ public class CartItemTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/684815")
     @Description("Проверка элементов в карточке товара")
     public void checkElementOnCartItem() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10656190");
         clickOnElement(lPage.getImageItem());
         checkElementOnPage(cartPage.getBackBtn());
@@ -57,6 +58,7 @@ public class CartItemTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/684813")
     @Description("Взаимодействие с картинкой товара")
     public void imageGallery() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10642580");
         clickOnElement(lPage.getImageItem());
         clickOnElement(cartPage.getImage());
@@ -72,6 +74,7 @@ public class CartItemTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/684816")
     @Description("Наличие кнопки воспроизведения видео и воспроизведение видео")
     public void videoOnItem() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10656190");
         clickOnElement(lPage.getImageItem());
         clickOnElement(cartPage.getPlayVideo());
@@ -95,6 +98,7 @@ public class CartItemTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/687803")
     @Description("Отображение рич контента и его кликабельность")
     public void checkItemWithRichContent() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10558310");
         clickOnElement(lPage.getImageItem());
         checkElementOnPage(cartPage.getRichContent());
@@ -115,6 +119,7 @@ public class CartItemTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/684821")
     @Description("Проверка наличия ссылки на таблицу размеров и её открытие")
     public void openTableSize() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10674141");
         clickOnElement(lPage.getImageItem());
         scrollByCoord(50,1700,50,500,1);
@@ -139,6 +144,7 @@ public class CartItemTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/684825")
     @Description("Проверка появления блока доступности товара в магазине")
     public void checkDefaultPickup() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10642580");
         clickOnElement(lPage.getImageItem());
         scrollByCoord(50,1700,50,500,1);
@@ -157,6 +163,7 @@ public class CartItemTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/684819")
     @Description("Проверка появления алерта, при добавлении в корзину, если не выбрать размер")
     public void checkSnackChooseSize() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10656190");
         clickOnElement(lPage.getImageItem());
         scrollByCoord(50,1700,50,500,1);
@@ -175,6 +182,7 @@ public class CartItemTest extends InitialClass {
     @Link("")
     @Description("Проверка появления плавающей кнопки добавления товара в корзину и её элементов")
     public void checkAddBacketFloat() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10656190");
         clickOnElement(lPage.getImageItem());
         scrollByCoord(50,1700,50,500,2);
@@ -192,6 +200,7 @@ public class CartItemTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/684830")
     @Description("Успешное добавление в корзину из КТ по главной кнопке 'В корзину'")
     public void addBasketFromCartItemMainButton() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10642580");
         clickOnElement(lPage.getImageItem());
         scrollByCoord(50,1700,50,500,1);
@@ -210,6 +219,7 @@ public class CartItemTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/684830")
     @Description("Успешное добавление в корзину из КТ по плавающей кнопке 'В корзину'")
     public void addBasketFromCartItemFloatButton() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10642580");
         clickOnElement(lPage.getImageItem());
         scrollByCoord(50,1700,50,500,1);

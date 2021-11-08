@@ -17,6 +17,7 @@ public class ListingTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/671850")
     @Description("Проверка наличия элементов в товарной плитке")
     public void checkElementsOnListing(){
+        clickOnElement(onboardPage.getCloseBtn());
 
         clickOnElement(cPage.getCatalog());
         clickOnElement(cPage.getCategory());
@@ -38,6 +39,7 @@ public class ListingTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/671854")
     @Description("Проверка наличия элементов на карточке товара в товарной плитке")
     public void checkElementOnItem(){
+        clickOnElement(onboardPage.getCloseBtn());
         clickOnElement(cPage.getCatalog());
         clickOnElement(cPage.getCategory());
         clickOnElement(cPage.getSubCategory());
@@ -61,6 +63,7 @@ public class ListingTest extends InitialClass {
     @Link("")
     @Description("Успешное добавление в корзину размерного товара")
     public void addBasketFromListing() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         openListing("10642580");
         clickOnElement(lPage.getBasketBtn());
         clickOnElement(lPage.getSizeElement1());

@@ -41,11 +41,16 @@ public class BasketPage extends BaseClass {
     private final By priceItemOnBasket = MobileBy.id("ru.sportmaster.app.v4:id/price_tv");
     private final By oldPriceItemOnBasket = MobileBy.id("ru.sportmaster.app.v4:id/old_price_tv");
     private final By sumItemOnBasket = MobileBy.xpath("ru.sportmaster.app.v4:id/count_tv");
+
     private final By btnMain = MobileBy.id("ru.sportmaster.app.v4:id/btn");
     private final By btnFloat = MobileBy.id("ru.sportmaster.app.v4:id/by_cart_btn");
     private final By blockFloat = MobileBy.id("ru.sportmaster.app.v4:id/to_checkout_include");
     private final By blockFloatOldPrice = MobileBy.id("ru.sportmaster.app.v4:id/old_price_tv");
     private final By blockFloatPrice = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.TextView[2]");
+    private final By authFromBasketBtn = MobileBy.id("ru.sportmaster.app.v4:id/auth_btn");
+    private final By nextWithOutAuth = MobileBy.id("ru.sportmaster.app.v4:id/next_tv");
+
+
     // нет в наличии
     private final By itemUnavailableBox = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[1]/androidx.appcompat.widget.LinearLayoutCompat/android.widget.TextView[1]");
     private final By descItemFromUnavailable = MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[1]/android.widget.TextView");
@@ -74,6 +79,8 @@ public class BasketPage extends BaseClass {
     //экран сопсоб получения
     private final By btnExpressDelivery = MobileBy.id("ru.sportmaster.app.v4:id/express_delivery");
     private final By btnPickupInSingleStore = MobileBy.id("ru.sportmaster.app.v4:id/pickup_everything_in_one_store");
+
+
 
     public By getBasket() {
         return basket;
@@ -121,6 +128,18 @@ public class BasketPage extends BaseClass {
 
     public By getBtnMain() {
         return btnMain;
+    }
+
+    public By getAuthFromBasketBtn() {
+        return authFromBasketBtn;
+    }
+
+    public By getBtnPickupInSingleStore() {
+        return btnPickupInSingleStore;
+    }
+
+    public By getNextWithOutAuth() {
+        return nextWithOutAuth;
     }
 
     public By getSizeItemOnBasket() {

@@ -6,6 +6,8 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Link;
 import org.junit.Test;
 
+import java.io.IOException;
+
 public class AuthorizationTest extends InitialClass {
 
 
@@ -14,8 +16,10 @@ public class AuthorizationTest extends InitialClass {
     @Link("")
     @Description("Проверка наличия элементов на экране авторизации")
     @Test
-    public void checkAuthPage() {
+    public void checkAuthPage() throws IOException {
+        clickOnElement(onboardPage.getCloseBtn());
         clickOnElement(authPage.getProfilePage());
+        clickOnElement(profilePage.getAuthBtn());
         checkElementOnPage(authPage.getCloseBtn());
         checkElementOnPage(authPage.getCountryCode());
         checkElementOnPage(authPage.getPhoneEdit());
@@ -25,6 +29,7 @@ public class AuthorizationTest extends InitialClass {
         checkElementOnPage(authPage.getOkBtn());
         checkElementOnPage(authPage.getFbBtn());
 
+
     }
 
     @Epic("Авторизация")
@@ -32,6 +37,9 @@ public class AuthorizationTest extends InitialClass {
     @Description("Появление алерта ошибки при вводе неверного кода подтверждения")
     @Test
     public void sendIncorrectCode() {
+        clickOnElement(onboardPage.getCloseBtn());
+        clickOnElement(authPage.getProfilePage());
+        clickOnElement(profilePage.getAuthBtn());
         clickOnElement(authPage.getProfilePage());
         sendKeys(authPage.getPhoneEdit(), "9999999999");
         clickOnElement(authPage.getAuthBtn());

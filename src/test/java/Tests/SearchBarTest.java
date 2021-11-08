@@ -19,6 +19,7 @@ public class SearchBarTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/678830")
     @Description("Проверка наличия элементов в поиске")
     public void checkElementsOnSearch(){
+        clickOnElement(onboardPage.getCloseBtn());
         clickOnElement(cPage.getCatalog());
         clickOnElement(sBar.getSearchbar());
         sendKeys(sBar.getSearchbar(),"кроссовки");
@@ -42,6 +43,7 @@ public class SearchBarTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/678832")
     @Description("Проверка работы подсказок")
     public void checkTapOnSearch(){
+        clickOnElement(onboardPage.getCloseBtn());
 
         clickOnElement(cPage.getCatalog());
         clickOnElement(sBar.getSearchbar());
@@ -61,6 +63,7 @@ public class SearchBarTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/678890")
     @Description("Переход на КТ из поиска")
     public void cartItemFromSearch(){
+        clickOnElement(onboardPage.getCloseBtn());
        clickOnElement(cPage.getCatalog());
        clickOnElement(sBar.getSearchbar());
        sendKeys(sBar.getSearchbar(),"кроссовки");

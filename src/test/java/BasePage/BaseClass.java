@@ -48,6 +48,7 @@ public class BaseClass {
         driver.quit();
         System.out.println();
         System.out.println("Приложение закрыто");
+
     }
 
 

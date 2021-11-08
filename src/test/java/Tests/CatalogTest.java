@@ -16,6 +16,7 @@ public class CatalogTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/671781")
     @Description("проверка наличия элементов в каталоге ")
     public void checkElementsOnCatalog() {
+        clickOnElement(onboardPage.getCloseBtn());
         clickOnElement(cPage.getCatalog());
         checkElementOnPage(cPage.getSearchBar());
         checkElementOnPage(cPage.getSearchBar());
@@ -32,6 +33,7 @@ public class CatalogTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/671788")
     @Description("проверка наличия элементов на 2-3 уровнях каталога")
     public void checkSubCategoryRazdel(){
+        clickOnElement(onboardPage.getCloseBtn());
         clickOnElement(cPage.getCatalog());
         clickOnElement(cPage.getCategory());
         checkElementOnPage(cPage.getBackButton());
@@ -48,6 +50,7 @@ public class CatalogTest extends InitialClass {
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/671800")
     @Description("Проверка появление блока ранее просмотренных товаров")
     public void checkResentlyWatched() throws InterruptedException {
+        clickOnElement(onboardPage.getCloseBtn());
         clickOnElement(cPage.getCatalog());
         Thread.sleep(1000);
         verticalSwipeByPercentages(0.8,0.01,0.5);
