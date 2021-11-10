@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: Tests.AuthorizationTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.242 s - in Tests.AuthorizationTest
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 60.625 s <<< FAILURE! - in Tests.AuthorizationTest
+sendIncorrectCode(Tests.AuthorizationTest)  Time elapsed: 34.508 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.AccessibilityId: account (tried for 10 second(s) with 500 milliseconds interval)
+	at Tests.AuthorizationTest.sendIncorrectCode(AuthorizationTest.java:43)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3BVGB91', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, deviceName: Pixel 3, platformName: android, platformVersion: 11}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: Pixel 3, deviceName: 8B6X14AL9, deviceScreenDensity: 440, deviceScreenSize: 1080x2160, deviceUDID: 8B6X14AL9, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: LINUX, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 1962, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: da47b390-dc1b-4091-89c3-13378cea1442
+*** Element info: {Using=accessibility id, value=account}
+	at Tests.AuthorizationTest.sendIncorrectCode(AuthorizationTest.java:43)
+

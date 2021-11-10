@@ -1,7 +1,7 @@
 package PageObject;
 
-
 import BasePage.BaseClass;
+import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
@@ -74,7 +74,11 @@ public class InitialClass extends BaseClass{
         clickOnElement(cPage.getSearchBar());
         driver.findElement(cPage.getSearchBar()).sendKeys(keys);
         Thread.sleep(1500);
-        tapByCoordinates(981, 1913);
+        driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
+
+
+
+
     }
 
     //добавление товара в корзину и переход в корзину.
@@ -324,28 +328,9 @@ public class InitialClass extends BaseClass{
     }
 
     //Scroll to element
-    public void scrollToElementById() {
-//        Dimension dimensions = driver.manage().window().getSize();
-//        double point = dimensions.getHeight() * 0.45;
-//        int pointAsAnInteger = (int) point;
+    public void scrollToElementById(By element) {
 //
-//        int element_Count = driver.findElements(element).size();
-//        System.out.println("Element count is : " + element_Count);
-//
-//        do {
-//            TouchAction action = new TouchAction(driver);
-//            action.press(PointOption.point(0 , pointAsAnInteger * 2))
-//                    .moveTo(PointOption.point(0 , pointAsAnInteger))
-//                    .release()
-//                    .perform();
-//            element_Count = driver.findElements(element).size();
-//            System.out.println("Element count is : " + element_Count);
-//        } while(element_Count==0);
-//        Dimension dimensions = driver.manage().window().getSize();
-//        Double point = dimensions.getHeight() * 0.45;
-//        int pointAsAnInteger = point.intValue();
-//
-        int spinner_Count = driver.findElements(By.id("ru.sportmaster.app.v4:id/by_cart_include")).size();
+        int spinner_Count = driver.findElements(element).size();
         System.out.println("Spinner count is : " + spinner_Count);
 
         do {
@@ -355,7 +340,7 @@ public class InitialClass extends BaseClass{
                     .waitAction(waitOptions(ofMillis(1000)))
                     .release()
                     .perform();
-            spinner_Count = driver.findElements(By.id("ru.sportmaster.app.v4:id/by_cart_include")).size();
+            spinner_Count = driver.findElements(element).size();
             System.out.println("Spinner count is : " + spinner_Count);
         } while(spinner_Count==0);
 

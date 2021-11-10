@@ -28,7 +28,7 @@ public class BasketTest extends InitialClass {
     }
 
 
-    //добавить кредит, тотал и баннер
+    //добавить кредит, тотал, баннер, промокод
     @Test
     @Epic("Корзина")
     @Feature("Первый экран корзины")
@@ -216,7 +216,7 @@ public class BasketTest extends InitialClass {
         clickOnElement(basketPage.getNextWithOutAuth());
         checkElementOnPage(basketPage.getBtnPickupInSingleStore());
         isElementEnabled(basketPage.getBtnPickupInSingleStore());
-        isElementEnabled(basketPage.getBtnExpressDelivery());
+
 
     }
 
@@ -231,7 +231,9 @@ public class BasketTest extends InitialClass {
         clickOnElement(cPage.getCatalog());
         addItemsOnBasketFromListing(new String[]{"кроссовки",});
         clickOnElement(basketPage.getBasket());
-        clickOnElement(basketPage.getBtnFloat());
+        wait.until(ExpectedConditions.presenceOfElementLocated(basketPage.getBtnMain()));
+        verticalSwipeByPercentages(0.6,0.2,0.5);
+        clickOnElement(basketPage.getBtnMain());
         clickOnElement(basketPage.getNextWithOutAuth());
         checkElementOnPage(basketPage.getBtnExpressDelivery());
         isElementEnabled(basketPage.getBtnExpressDelivery());
@@ -245,12 +247,15 @@ public class BasketTest extends InitialClass {
     @Story("Экспресс доставка")
     @Link("")
     @Description("Добавление в корзину товара для которого не доступна экспресс доставка. Кнопка экспресс доставки должна отсутствовать на экране. Результат теста 'Элемент отсутствует'")
+
     public void expressDeliveryShowDeliveryButtonFalse() throws InterruptedException {
         clickOnElement(onboardPage.getCloseBtn());
         clickOnElement(cPage.getCatalog());
         addItemsOnBasketFromListing(new String[]{"беговая дорожка",});
         clickOnElement(basketPage.getBasket());
-        clickOnElement(basketPage.getBtnFloat());
+        wait.until(ExpectedConditions.presenceOfElementLocated(basketPage.getBtnMain()));
+        verticalSwipeByPercentages(0.6,0.2,0.5);
+        clickOnElement(basketPage.getBtnMain());
         clickOnElement(basketPage.getNextWithOutAuth());
         checkElementOnPage(basketPage.getBtnExpressDelivery());
 
@@ -273,9 +278,8 @@ public class BasketTest extends InitialClass {
         clickOnElement(basketPage.getNextWithOutAuth());
         checkElementOnPage(basketPage.getBtnExpressDelivery());
         isElementEnabled(basketPage.getBtnExpressDelivery());
-
-
-
+        MobileElement comment = driver.findElement(basketPage.getDeliveryComment());
+        System.out.println(comment.getText());
     }
 
 

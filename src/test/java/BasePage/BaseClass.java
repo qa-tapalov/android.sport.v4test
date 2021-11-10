@@ -23,7 +23,7 @@ public class BaseClass {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3");
 //        capabilities.setCapability("autoAcceptAlerts", "true");
         capabilities.setCapability("appPackage", "ru.sportmaster.app.v4");

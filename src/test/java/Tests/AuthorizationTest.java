@@ -40,7 +40,6 @@ public class AuthorizationTest extends InitialClass {
         clickOnElement(onboardPage.getCloseBtn());
         clickOnElement(authPage.getProfilePage());
         clickOnElement(profilePage.getAuthBtn());
-        clickOnElement(authPage.getProfilePage());
         sendKeys(authPage.getPhoneEdit(), "9999999999");
         clickOnElement(authPage.getAuthBtn());
         sendKeys(authPage.getSendCodeBar(), "1111");

@@ -79,7 +79,7 @@ public class BasketPage extends BaseClass {
     //экран сопсоб получения
     private final By btnExpressDelivery = MobileBy.id("ru.sportmaster.app.v4:id/express_delivery");
     private final By btnPickupInSingleStore = MobileBy.id("ru.sportmaster.app.v4:id/pickup_everything_in_one_store");
-
+    private final By deliveryComment = MobileBy.id("ru.sportmaster.app.v4:id/express_delivery_comment");
 
 
     public By getBasket() {
@@ -309,5 +309,9 @@ public class BasketPage extends BaseClass {
 
     public By getMotivationBanner() {
         return motivationBanner;
+    }
+
+    public By getDeliveryComment() {
+        return deliveryComment;
     }
 }

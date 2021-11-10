@@ -1,74 +1,32 @@
 -------------------------------------------------------------------------------
 Test set: Tests.BasketTest
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 638.406 s <<< FAILURE! - in Tests.BasketTest
-expressDeliveryIsAvailableTrue(Tests.BasketTest)  Time elapsed: 47.409 s  <<< ERROR!
+Tests run: 14, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 572.415 s <<< FAILURE! - in Tests.BasketTest
+expressDeliveryIsAvailableTrue(Tests.BasketTest)  Time elapsed: 43.71 s  <<< ERROR!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: ru.sportmaster.app.v4:id/by_cart_btn (tried for 10 second(s) with 500 milliseconds interval)
-	at Tests.BasketTest.expressDeliveryIsAvailableTrue(BasketTest.java:222)
+	at Tests.BasketTest.expressDeliveryIsAvailableTrue(BasketTest.java:234)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-3BVGB91', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, deviceName: Pixel 3, platformName: android, platformVersion: 11}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: Pixel 3, deviceName: 8B6X14AL9, deviceScreenDensity: 440, deviceScreenSize: 1080x2160, deviceUDID: 8B6X14AL9, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 1962, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: f0db2d77-d754-40e9-b087-8aecef87420e
+Capabilities {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, deviceName: Pixel 3, platformName: android, platformVersion: 11}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: Pixel 3, deviceName: 8B6X14AL9, deviceScreenDensity: 440, deviceScreenSize: 1080x2160, deviceUDID: 8B6X14AL9, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: LINUX, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 1962, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 467a06be-d129-44f3-af5d-e6fa8f18fd97
 *** Element info: {Using=id, value=ru.sportmaster.app.v4:id/by_cart_btn}
-	at Tests.BasketTest.expressDeliveryIsAvailableTrue(BasketTest.java:222)
+	at Tests.BasketTest.expressDeliveryIsAvailableTrue(BasketTest.java:234)
 
-expressDeliveryShowDeliveryButtonFalse(Tests.BasketTest)  Time elapsed: 45.427 s  <<< ERROR!
+expressDeliveryShowDeliveryButtonFalse(Tests.BasketTest)  Time elapsed: 38.538 s  <<< ERROR!
 org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: ru.sportmaster.app.v4:id/by_cart_btn (tried for 10 second(s) with 500 milliseconds interval)
-	at Tests.BasketTest.expressDeliveryShowDeliveryButtonFalse(BasketTest.java:240)
+	at Tests.BasketTest.expressDeliveryShowDeliveryButtonFalse(BasketTest.java:253)
 Caused by: org.openqa.selenium.NoSuchElementException: 
 An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-3BVGB91', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, deviceName: Pixel 3, platformName: android, platformVersion: 11}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: Pixel 3, deviceName: 8B6X14AL9, deviceScreenDensity: 440, deviceScreenSize: 1080x2160, deviceUDID: 8B6X14AL9, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 1962, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 7980f987-63c5-4478-921c-36be9b2cace1
+Capabilities {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, deviceName: Pixel 3, platformName: android, platformVersion: 11}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: Pixel 3, deviceName: 8B6X14AL9, deviceScreenDensity: 440, deviceScreenSize: 1080x2160, deviceUDID: 8B6X14AL9, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: LINUX, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 1962, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: d5e1df63-8595-4c66-b44d-9d00c987dd06
 *** Element info: {Using=id, value=ru.sportmaster.app.v4:id/by_cart_btn}
-	at Tests.BasketTest.expressDeliveryShowDeliveryButtonFalse(BasketTest.java:240)
-
-availableForPickupInSingleStoreTrue(Tests.BasketTest)  Time elapsed: 60.024 s  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: ru.sportmaster.app.v4:id/by_cart_btn (tried for 10 second(s) with 500 milliseconds interval)
-	at Tests.BasketTest.availableForPickupInSingleStoreTrue(BasketTest.java:186)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3BVGB91', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, deviceName: Pixel 3, platformName: android, platformVersion: 11}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: Pixel 3, deviceName: 8B6X14AL9, deviceScreenDensity: 440, deviceScreenSize: 1080x2160, deviceUDID: 8B6X14AL9, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 1962, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: e199077c-50cf-440f-8fb2-d7f35c11efe5
-*** Element info: {Using=id, value=ru.sportmaster.app.v4:id/by_cart_btn}
-	at Tests.BasketTest.availableForPickupInSingleStoreTrue(BasketTest.java:186)
-
-availableForPickupInSingleStoreFalse(Tests.BasketTest)  Time elapsed: 72.427 s  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: ru.sportmaster.app.v4:id/by_cart_btn (tried for 10 second(s) with 500 milliseconds interval)
-	at Tests.BasketTest.availableForPickupInSingleStoreFalse(BasketTest.java:204)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3BVGB91', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, deviceName: Pixel 3, platformName: android, platformVersion: 11}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: Pixel 3, deviceName: 8B6X14AL9, deviceScreenDensity: 440, deviceScreenSize: 1080x2160, deviceUDID: 8B6X14AL9, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 1962, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: d0ad4eba-9ec5-4551-abca-7127bb2032d9
-*** Element info: {Using=id, value=ru.sportmaster.app.v4:id/by_cart_btn}
-	at Tests.BasketTest.availableForPickupInSingleStoreFalse(BasketTest.java:204)
-
-expressDeliveryIsAvailableFalse(Tests.BasketTest)  Time elapsed: 62.463 s  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: ru.sportmaster.app.v4:id/by_cart_btn (tried for 10 second(s) with 500 milliseconds interval)
-	at Tests.BasketTest.expressDeliveryIsAvailableFalse(BasketTest.java:258)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-3BVGB91', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, databaseEnabled: false, desired: {appActivity: ru.sportmaster.app.view.App..., appPackage: ru.sportmaster.app.v4, automationName: UiAutomator2, deviceName: Pixel 3, platformName: android, platformVersion: 11}, deviceApiLevel: 30, deviceManufacturer: Google, deviceModel: Pixel 3, deviceName: 8B6X14AL9, deviceScreenDensity: 440, deviceScreenSize: 1080x2160, deviceUDID: 8B6X14AL9, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 66, takesScreenshot: true, viewportRect: {height: 1962, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 33fea0c4-6e28-4d85-9512-8a15cddd5c62
-*** Element info: {Using=id, value=ru.sportmaster.app.v4:id/by_cart_btn}
-	at Tests.BasketTest.expressDeliveryIsAvailableFalse(BasketTest.java:258)
+	at Tests.BasketTest.expressDeliveryShowDeliveryButtonFalse(BasketTest.java:253)
 

@@ -3,12 +3,16 @@ PageObject\InitialClass.class
 Tests\SearchBarTest.class
 PageObject\ListingPage.class
 PageObject\CartItemPage.class
+PageObject\ProfilePage.class
 Tests\ListingTest.class
 PageObject\BasketPage.class
+PageObject\OnboardPage.class
+Tests\OnboardTest.class
 PageObject\SearchBar.class
 Tests\BasketTest.class
 Tests\CartItemTest.class
 PageObject\AuthorizationPage.class
 Tests\AuthorizationTest.class
+PageObject\MainPage.class
 BasePage\BaseClass.class
 Tests\CatalogTest.class
