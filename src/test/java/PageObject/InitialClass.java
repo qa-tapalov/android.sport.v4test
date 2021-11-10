@@ -43,14 +43,6 @@ public class InitialClass extends BaseClass{
 
 
     //создание скриншота
-    public void screenShot(){
-        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-
-
-
-
-    }
-
     public void captureScreenShots() throws IOException {
         String folder_name;
         DateFormat df;
