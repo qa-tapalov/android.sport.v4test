@@ -116,7 +116,7 @@ public class InitialClass extends BaseClass{
             clickOnElement(cPage.getSearchBar());
             driver.findElement(cPage.getSearchBar()).sendKeys(i);
             Thread.sleep(1500);
-            tapByCoordinates(981, 1913);
+            driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
             clickOnElement(lPage.getBasketBtn());
             chooseAvailableSize();
             clickOnElement(lPage.getAddBasketBtn());
