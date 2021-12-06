@@ -49,7 +49,7 @@ public class CatalogTest extends InitialClass {
     @Epic("Каталог приложения")
     @Link("https://testrail.app.local/testrail/index.php?/cases/view/671800")
     @Description("Проверка появление блока ранее просмотренных товаров")
-    public void checkResentlyWatched() throws InterruptedException {
+    public void checkRecentlyWatched() throws InterruptedException {
         clickOnElement(onboardPage.getCloseBtn());
         clickOnElement(cPage.getCatalog());
         Thread.sleep(1000);
@@ -57,8 +57,9 @@ public class CatalogTest extends InitialClass {
         isElementDisplayed(cPage.getRecentlyWatched());
         clickOnElement(sBar.getSearchbar());
         sendKeys(sBar.getSearchbar(),"кроссовки");
-        clickOnElement(sBar.getHint1());
-        clickOnElement(lPage.getItem());
+//        clickOnElement(sBar.getHint1());
+//        clickOnElement(lPage.getItem());
+        clickOnElement(sBar.getCartItemFromSearch1());
         Thread.sleep(1000);
         clickOnElement(cPage.getCatalog());
         Thread.sleep(1000);

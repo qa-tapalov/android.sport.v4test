@@ -1,0 +1,58 @@
+# Created at 2021-12-06T10:52:29.127
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:397)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+# Created at 2021-12-06T10:52:29.915
+Unexpected IOException with stream: 
+
+
+# Created at 2021-12-06T10:52:29.921
+Unexpected IOException with stream: Приложение закрыто
+
+
+# Created at 2021-12-06T10:52:29.922
+Unexpected IOException: 7,1,Tests.BasketTest,expressDeliveryShowDeliveryButtonFalse(Tests.BasketTest),null,Expected condition failed: waiting for presence of element located by: By.xpath: //android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[1] (tried for 20 second(s) with 500 milliseconds interval),null,Expected condition failed: waiting for presence of element located by: By.xpath: //android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[1] (tried for 20 second(s) with 500 milliseconds interval),BasketTest.expressDeliveryShowDeliveryButtonFalse:254->InitialClass.addItemsOnBasketFromListing:121->InitialClass.chooseAvailableSize:144 \00BB Timeout,org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[1] (tried for 20 second(s) with 500 milliseconds interval)\000A\0009at Tests.BasketTest.expressDeliveryShowDeliveryButtonFalse(BasketTest.java:254)\000ACaused by: org.openqa.selenium.NoSuchElementException: \000AAn element could not be located on the page using the given search parameters.\000AFor documentation on this error\002C please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\000ABuild info: version: '3.141.59'\002C revision: 'e82be7d358'\002C time: '2018-11-14T08:17:03'\000ASystem info: host: 'DESKTOP-3BVGB91'\002C ip: '192.168.56.1'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '11'\000ADriver info: io.appium.java_client.android.AndroidDriver\000ACapabilities {appActivity: ru.sportmaster.app.view.App...\002C appPackage: ru.sportmaster.app.v4\002C automationName: UiAutomator2\002C databaseEnabled: false\002C desired: {appActivity: ru.sportmaster.app.view.App...\002C appPackage: ru.sportmaster.app.v4\002C automationName: UiAutomator2\002C deviceName: Pixel 3\002C platformName: android\002C platformVersion: 11}\002C deviceApiLevel: 30\002C deviceManufacturer: Google\002C deviceModel: Pixel 3\002C deviceName: 8B6X14AL9\002C deviceScreenDensity: 440\002C deviceScreenSize: 1080x2160\002C deviceUDID: 8B6X14AL9\002C javascriptEnabled: true\002C locationContextEnabled: false\002C networkConnectionEnabled: true\002C pixelRatio: 2.75\002C platform: LINUX\002C platformName: LINUX\002C platformVersion: 11\002C statBarHeight: 66\002C takesScreenshot: true\002C viewportRect: {height: 1962\002C left: 0\002C top: 66\002C width: 1080}\002C warnings: {}\002C webStorageEnabled: false}\000ASession ID: 8dd1a42a-3a9e-4d00-b0c4-be0e5db33a70\000A*** Element info: {Using=xpath\002C value=//android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/androidx.cardview.widget.CardView[1]}\000A\0009at Tests.BasketTest.expressDeliveryShowDeliveryButtonFalse(BasketTest.java:254)\000A
+
+
+# Created at 2021-12-06T10:52:29.941
+Unexpected IOException: 5,1,Tests.BasketTest,unavailableBox(Tests.BasketTest),null,null,null
+
+
+# Created at 2021-12-06T10:52:36.064
+Unexpected IOException with stream: дек. 06, 2021 10:52:36 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+
+
+# Created at 2021-12-06T10:52:36.085
+Unexpected IOException with stream: Приложение запущено
+
+
+# Created at 2021-12-06T10:52:36.086
+Unexpected IOException with stream: 
+
+
+# Created at 2021-12-06T10:52:46.971
+Unexpected IOException with stream: Click on element: By.id: ru.sportmaster.app.v4:id/toolbarButton
+
+
+# Created at 2021-12-06T10:52:54.366
+Unexpected IOException with stream: Click on element: By.AccessibilityId: catalog
+
+
+# Created at 2021-12-06T10:52:55.464
+Unexpected IOException with stream: Click on element: By.id: ru.sportmaster.app.v4:id/search_by_text
+
+
+# Created at 2021-12-06T10:53:06.027
+Unexpected IOException with stream: Click on element: By.xpath: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.ImageView
+
+
+# Created at 2021-12-06T10:53:09.912
+Unexpected IOException with stream: Scroll screen
+
+

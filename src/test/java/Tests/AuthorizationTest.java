@@ -46,4 +46,19 @@ public class AuthorizationTest extends InitialClass {
         checkElementOnPage(authPage.getIncorrectCode());
 
     }
+
+    @Epic("Авторизация")
+    @Link("")
+    @Description("Появление алерта ошибки при вводе неверного кода подтверждения")
+    @Test
+    public void authWithPhone() {
+        clickOnElement(onboardPage.getCloseBtn());
+        clickOnElement(authPage.getProfilePage());
+        clickOnElement(profilePage.getAuthBtn());
+        sendKeys(authPage.getPhoneEdit(), "9071239901");
+        clickOnElement(authPage.getAuthBtn());
+        sendKeys(authPage.getSendCodeBar(), "1234");
+        checkElementOnPage(profilePage.getCities());
+
+    }
 }

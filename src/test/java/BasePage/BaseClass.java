@@ -23,7 +23,7 @@ public class BaseClass {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3");
 //        capabilities.setCapability("autoAcceptAlerts", "true");
         capabilities.setCapability("appPackage", "ru.sportmaster.app.v4");
@@ -34,7 +34,7 @@ public class BaseClass {
         URL url = new URL("http://127.0.0.1:4723/wd/hub");
 
         driver = new AndroidDriver<>(url, capabilities);
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 20);
 
         System.out.println("Приложение запущено");
         System.out.println();
